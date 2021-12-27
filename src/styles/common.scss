@@ -1,4 +1,12 @@
 @import "colors";
+@import "text";
+@import "buttons";
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
 
 .navigation-bar {
     height: 30px;
@@ -37,21 +45,5 @@
         &.row {
             flex-direction: row;
         }
-    }
-}
-
-.footer {
-    width: 100vw;
-    .decoration {
-        background-image: url('/images/Footer.svg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 185px;
-    }
-
-    .text {
-        color: $white-primary;
-        background-color: $off-black-primary;
-        padding: 50px 75px;
     }
 }

@@ -1,35 +1,39 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import { Link, useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import HeaderLogo from "../images/header-logo.svg";
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+const Header: React.FC = () => {
+  const { language, languages, originalPath} = useI18next()
+  const { t } = useTranslation();
+
+  return (
+    <header>
+      <nav className="navigation-bar">
+        <a href="#">{t('navbar-home')}</a>
+        <a href="#about">{t('navbar-about')}</a>
+        <a href="#history">{t('navbar-history')}</a>
+        <a href="#sponsor">{t('navbar-why')}</a>
+        <a href="#faq">{t('navbar-faq')}</a>
+        <a href="#contact">{t('navbar-contact')}</a>
+        <a className="logo-link" href="#">
+          <img src={HeaderLogo} />
+        </a>
+        {
+          languages.map((lang) => {
+            if(lang !== language) {
+              return (
+                <Link className="language-toggle" to={originalPath} language={lang} key={lang}>
+                  {lang}
+                </Link>
+              )
+            }
+          })
+        }
+      </nav>
+    </header>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
