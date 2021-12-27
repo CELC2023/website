@@ -1,0 +1,64 @@
+@import "../styles/colors.scss";
+
+.top-area {
+    height: 900px;
+    display: flex;
+    background-image: url('../images/header-banner.png');
+    background-repeat: no-repeat;
+    .information-card {
+        background-color: $white-primary;
+        margin-top: 150px;
+        min-height: 30%;
+        height: fit-content;
+        width: 45%;
+        border-radius: 0 13px 13px 0;
+        display: flex;
+        flex-direction: column;
+        padding-left: 2%;
+        .card {
+            &-header {
+                display: flex;
+                flex-direction: column;
+                h2 {
+                   font-weight: 700; 
+                   font-size: 2rem;
+                   color: $blue-primary;
+                }
+                h4 {
+                    color: $red-primary;
+                    font-weight: 400;
+                }
+            }
+    
+            &-body {
+                display: flex;
+                
+            }
+            &-actions {
+                display: flex;
+    
+            }
+    
+            &-details {
+                display: flex;
+                flex-direction: column;
+                .location::before {
+                    content: '';
+                    background-image: url('../images/icons/calendar.svg');
+                    display: inline-block;
+                    color: $red-primary;
+                }
+            }
+        }
+    
+    }
+    .location-tag {
+        place-self: flex-end;
+        margin-left: auto;
+        margin-right: 15px;
+        background-color: white;
+        padding: 5px 10px;
+        border-radius: 50px;
+        color: $blue-primary;
+    }
+}

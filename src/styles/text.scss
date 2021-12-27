@@ -1,0 +1,21 @@
+
+// Headings
+
+.title {
+    &-black {
+        text-transform: uppercase;
+        font-size: 3em;
+        color: $black-primary;
+    }
+
+    &-blue {
+        text-transform: uppercase;
+        font-size: 3em;
+        color: $blue-primary;
+    }
+
+}
+
+.text-grey {
+    color: $grey-primary;
+}

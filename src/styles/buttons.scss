@@ -1,0 +1,47 @@
+@import "colors";
+
+[class*="button-"] {
+    border-radius: 13px;
+    padding: 10px;
+    text-decoration: none;
+    width: max-content;
+}
+
+.button {
+    &-solid {
+        border: none;
+        &-blue {
+            background-color: $blue-primary;
+        }
+        &-grey {
+            background-color: $grey-primary;
+        }
+        &-red {
+            background-color: $red-primary;
+            color: $white-primary;
+        }
+    }
+
+    &-outlined {
+        &-blue {
+            border: 2px solid $blue-primary;
+            color: $blue-primary;
+        }
+        &-grey {
+            border: 2px solid $grey-primary;
+            color: $grey-primary;
+        }
+        &-red {
+            border: 2px solid $red-primary;
+            color: $red-primary;
+        }
+    }
+}
+
+.primary-solid-button {
+    background-color: $red-primary;
+}
+
+.secondary-outlined-button {
+    border: 1px solid $grey-primary;
+}

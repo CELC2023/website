@@ -1,0 +1,11 @@
+@import "../styles/colors.scss";
+
+.about {
+    background-image: url('../images/canada.png');
+    background-size: 55%;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    .content {
+        padding: 50px 0;
+    }
+}
