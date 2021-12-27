@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `A YYC ENG Conference`,
-    description: `A cool conference in Calgary happening sometime in the future!`,
-    author: `@gatsbyjs`,
+    title: `CELC 2023`,
+    description: `Canadian Engineering Leadership Conference 2023 Website`,
+    author: `CELC 2023 Organizing Committee`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -12,6 +12,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `locale`,
+        path: `${__dirname}/src/locales/`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -28,6 +35,15 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
+    },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locale`,
+        languages: [`en`, `fr`],
+        defaultLanguage: `en`,
+        siteUrl: `http://localhost:8000/`,
+      }
     },
     `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
