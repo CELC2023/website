@@ -105,3 +105,6 @@ dist
 
 # Public - build folder
 public/
+
+# VSCode Files
+.vscode
