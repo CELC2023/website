@@ -1,9 +1,8 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { Link, useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import HeaderLogo from "../images/header-logo.svg";
 
-const Header: React.FC = () => {
+const NavBar: React.FC = () => {
   const { language, languages, originalPath} = useI18next()
   const { t } = useTranslation();
 
@@ -35,12 +34,4 @@ const Header: React.FC = () => {
   )
 }
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
+export default NavBar
