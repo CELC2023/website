@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "celc-2023-static-site",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A static website for the CELC 2023 conference",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Robert Brown",
   "dependencies": {
     "gatsby": "^3.3.1",
     "gatsby-plugin-gatsby-cloud": "^2.2.0",
