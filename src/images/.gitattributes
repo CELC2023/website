@@ -1,0 +1,6 @@
+canada.png filter=lfs diff=lfs merge=lfs -text
+header-banner.png filter=lfs diff=lfs merge=lfs -text
+cec2005.png filter=lfs diff=lfs merge=lfs -text
+congress1975.png filter=lfs diff=lfs merge=lfs -text
+congress1994.png filter=lfs diff=lfs merge=lfs -text
+congress2016.png filter=lfs diff=lfs merge=lfs -text
