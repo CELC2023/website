@@ -1,0 +1,84 @@
+@import "../styles/colors.scss";
+
+.bands {
+    .band-container {
+        position: relative;
+        .band {
+            color: $white-primary;
+            font-weight: 600;
+            &.blue {
+                background-color: $blue-primary; 
+             }
+            &.red {
+               background-color: $red-primary; 
+            }
+            &.yellow {
+                background-color: $yellow-primary; 
+             }
+        }
+
+        #diversity-outer {
+            border-bottom: 1.5em solid $yellow-primary;
+            border-right: 1.5em solid $yellow-primary;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            width: 75%;
+            border-radius: 0 0 50px 0;
+            top: -200px;
+        }
+
+        #diversity-band {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            position: relative;
+            bottom: -18.75em;
+            text-align: center;
+        }
+
+
+        #technology-outer {
+            border-bottom: 1.5em solid $blue-primary;
+            border-right: 1.5em solid $blue-primary;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            width: 65%;
+            border-radius: 0 0 50px 0;
+            top: -300px;
+        }
+
+        #technology-band {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            position: relative;
+            bottom: -18.75em;
+            text-align: center;
+        }
+
+        #sustainability-outer {
+            border-top: 1.5em solid $red-primary;
+            border-left: 1.5em solid $red-primary;
+            height: 300px;
+            position: absolute;
+            right: 0;
+            width: 60%;
+            border-radius: 50px 0 0 0;
+            top: -75px;
+        }
+
+        #sustainability-band {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            position: relative;
+            top: -1.5em;
+        }
+    }
+
+    .footer {
+        width: 100%;
+        height: 200px;
+        background-image: url('../images/bands-bottom.svg');
+        background-size: contain;
+    }
+}

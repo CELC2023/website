@@ -1,0 +1,29 @@
+@import "../styles/colors.scss";
+
+.faq {
+    .faq-body {
+        .faq-container {
+            border-bottom: 1px solid $grey-secondary;
+            .faq-item {
+                border-top: 1px solid $grey-secondary;
+                .faq-header {
+                    font-weight: 700;
+                    margin: 0 0 1.5em 0;
+                    text-transform: uppercase;
+                    display: flex;
+                    
+                }
+                .faq-text {
+                    font-weight: 300;
+                }
+                .faq-control {
+                    text-align: end;
+                    font-size: 2.5em;
+                    font-weight: 300;
+                    margin: 0.25em 0 0 0;
+                    user-select: none;
+                }
+            }
+        }
+    }
+}

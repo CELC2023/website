@@ -22,7 +22,7 @@ const TopArea: React.FC = () => {
                     <p className="date" >{t('title-date')}</p>
                 </div>
             </div>
-            <p className="location-tag">Elliston Park</p>
+            <p className="location-tag">{t('title-image-location')}</p>
         </section>
     )
 }

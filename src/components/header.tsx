@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import { Link, useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import HeaderLogo from "../images/header-logo.svg";

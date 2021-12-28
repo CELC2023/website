@@ -1,0 +1,44 @@
+@import "../styles/colors.scss";
+
+.history {
+    background-color: $off-black-primary;
+    .title {
+        width: 60%;
+        font-size: 2.5rem;
+        color: $white-primary;
+        .emphasize {
+            color: $yellow-primary;
+        }
+    }
+    .content {
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+        width: 100%;
+        .card {
+            width: 250px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 13px;
+            margin: 5px 25px;
+            padding: 10px;
+
+            &.congress1975 {
+                background-image: url('../images/congress1975.png');
+            }
+
+            &.congress1994 {
+                background-image: url('../images/congress1994.png');
+            }
+
+            &.cec2005 {
+                background-image: url('../images/cec2005.png');
+            }
+
+            &.congress2016 {
+                background-image: url('../images/congress2016.png');
+            }
+        }
+    }
+}

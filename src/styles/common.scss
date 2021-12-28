@@ -6,6 +6,9 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
+    font-family: Poppins;
+    font-style: normal;
+    margin-top: 25px;
 }
 
 .navigation-bar {
@@ -46,4 +49,8 @@ body {
             flex-direction: row;
         }
     }
+}
+
+.padded-section {
+    padding: 50px;
 }

@@ -1,5 +1,5 @@
 import React from "react"
-import { useI18next, useTranslation, Trans } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import "./Footer.scss"
 
 const Footer: React.FC = () => {

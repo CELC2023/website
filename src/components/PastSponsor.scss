@@ -1,0 +1,20 @@
+@import "../styles/colors.scss";
+
+.past-sponsor {
+    background-color: $grey-light;
+    .past-sponsor-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        >img {
+            width: 20%;
+            padding: 10px 20px;
+        }
+    }
+    .more-sponsors {
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
