@@ -60,7 +60,7 @@ module.exports = {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
         google: {
-          families: [`Poppins`]
+          families: [`Poppins: 300,400,600,700`]
         }
       }
     },

@@ -5,16 +5,22 @@
     display: flex;
     background-image: url('https://res.cloudinary.com/celc/image/upload/q_auto,f_auto/v1641688217/celc2023-static/header-banner.png');
     background-repeat: no-repeat;
+    position: relative;
     .information-card {
         background-color: $white-primary;
         margin-top: 150px;
         min-height: 30%;
         height: fit-content;
         width: 45%;
-        border-radius: 0 13px 13px 0;
+        border-radius: 0 105px 105px 0;
         display: flex;
         flex-direction: column;
-        padding: 5% 0 5% 2%;
+        padding: 5% 2%;
+        @media screen and (max-width: 900px){
+            width: 100%;
+            border-radius: 0;
+            padding: 5% 50px;
+        }
         .card {
             &-header {
                 display: flex;
@@ -34,13 +40,15 @@
                 .title-text {
                     margin: 0;
                 }
-                .title-showcase-test {
+                .title-showcase-text {
                     margin: 0;
                 }
             }
     
             &-body {
                 display: flex;
+                color: $grey-primary;
+                margin-bottom: 7%;
                 
             }
             &-actions {
@@ -48,11 +56,25 @@
                 :not(:first-child) {
                     margin-left: 5%;
                 }
+                >a {
+                    width: 30%;
+                    text-align: center;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    @media screen and (max-width: 900px){
+                        width: max-content;
+                    }
+                }
             }
     
             &-details {
                 display: flex;
                 flex-direction: column;
+                color: $grey-primary;
+                margin-top: 7%;
+                >p {
+                    margin: 0;
+                }
                 .location::before {
                     content: '';
                     background-image: url('../images/icons/calendar.svg');
@@ -64,9 +86,9 @@
     
     }
     .location-tag {
-        place-self: flex-end;
-        margin-left: auto;
-        margin-right: 15px;
+        position: absolute;
+        bottom: 0;
+        right: 15px;
         background-color: white;
         padding: 5px 10px;
         border-radius: 50px;

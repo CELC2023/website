@@ -45,7 +45,7 @@ const Sponsor: React.FC = () => {
                 </div>
                 <div className="package-info">
                     <p>{t('sponsor-desc')}</p>
-                    <a className="button-outlined-grey sponsor-package">{t('sponsor-button')}</a>
+                    <a className="button-outlined-grey sponsor-package" href='https://drive.google.com/uc?export=download&id=1N5d6qZwl7zeDMn0v7fdZ2LmNrvQDOmCm'>{t('sponsor-button')}</a>
                 </div>
             </div>
         </section>

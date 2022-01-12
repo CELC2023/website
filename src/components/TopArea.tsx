@@ -12,7 +12,7 @@ const TopArea: React.FC = () => {
                     <h2 className='title-text'>{t('title-text')}</h2>
                     <h4 className='title-showcase-text'>{t('title-showcase')}</h4>
                 </div>
-                <p>{t('title-description')}</p>
+                <p className='card-body'>{t('title-description')}</p>
                 <div className="card-actions">
                     <a className="button-solid-red" href='mailto:chairs.future@celc.cfes.ca' target='_blank'>{t('title-partner')}</a>
                     <a className="button-outlined-grey">{t('title-learn')}</a>

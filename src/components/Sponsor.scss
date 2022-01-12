@@ -20,6 +20,7 @@
             justify-content: center;
             text-align: center;
             border-radius: 13px;
+            box-shadow: 0px 4px 8px rgba($black-primary, 0.35);
             &:nth-child(2n) {
                 background-color: $red-primary; 
             }
@@ -32,8 +33,18 @@
         display: flex;
         justify-content: space-around;
         padding: 0 20%;
+        align-items: center;
+        @media only screen and (max-width: 700px) {
+            flex-direction: column;
+            text-align: center;
+            .sponsor-package {
+                margin: none;
+            }
+        }
         .sponsor-package {
             margin-left: 5%;
+            white-space: nowrap;
+            height: fit-content;
         }
     }
 }
