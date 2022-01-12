@@ -28,4 +28,12 @@
             }
         }
     }
+    .package-info {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 20%;
+        .sponsor-package {
+            margin-left: 5%;
+        }
+    }
 }

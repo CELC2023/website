@@ -14,19 +14,28 @@
         border-radius: 0 13px 13px 0;
         display: flex;
         flex-direction: column;
-        padding-left: 2%;
+        padding: 5% 0 5% 2%;
         .card {
             &-header {
                 display: flex;
                 flex-direction: column;
+                text-transform: uppercase;
                 h2 {
                    font-weight: 700; 
-                   font-size: 2rem;
+                   font-size: 2.5rem;
                    color: $blue-primary;
+                   line-height: 95%;
                 }
                 h4 {
                     color: $red-primary;
                     font-weight: 400;
+                    font-size: 1.2rem;
+                }
+                .title-text {
+                    margin: 0;
+                }
+                .title-showcase-test {
+                    margin: 0;
                 }
             }
     
@@ -36,7 +45,9 @@
             }
             &-actions {
                 display: flex;
-    
+                :not(:first-child) {
+                    margin-left: 5%;
+                }
             }
     
             &-details {

@@ -38,11 +38,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `CELC 2023 | Calgary AB`,
+        short_name: `CELC 2023`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#A8A8A8`,
+        theme_color: `#19274B`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
@@ -53,7 +53,15 @@ module.exports = {
         localeJsonSourceName: `locale`,
         languages: [`en`, `fr`],
         defaultLanguage: `en`,
-        siteUrl: `http://localhost:8000/`,
+        siteUrl: process.env.SITE_URL,
+      }
+    },
+    {
+      resolve: `gatsby-plugin-web-font-loader`,
+      options: {
+        google: {
+          families: [`Poppins`]
+        }
       }
     },
     `gatsby-plugin-gatsby-cloud`,
