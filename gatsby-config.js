@@ -33,6 +33,12 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-anchor-links`,
+      options: {
+        duration: 500
+      }
+    },
     `gatsby-plugin-sharp`,
     'gatsby-plugin-sass',
     {

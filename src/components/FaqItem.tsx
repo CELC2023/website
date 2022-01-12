@@ -18,11 +18,11 @@ const FaqItem: React.FC<faqItemProps> = ({faq}) => {
 
     return (
         <div className={`faq-item faq-${isOpen ? 'open' : 'closed'}`} onClick={toggleOpen} >
-            <p className="faq-control" onClick={toggleOpen}>{isOpen ? '-' : '+'}</p>
-            <p className="faq-header">{faq.question}</p>
+            <p className="faq-control no-select" onClick={toggleOpen}>{isOpen ? '-' : '+'}</p>
+            <p className="faq-header no-select">{faq.question}</p>
             {
                 isOpen &&
-                <p className="faq-text">{faq.answer}</p>
+                <p className="faq-text no-select">{faq.answer}</p>
             }
         </div>
     )

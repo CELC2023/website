@@ -6,7 +6,7 @@ const TopArea: React.FC = () => {
     const {t} = useTranslation();
 
     return (
-        <section className="top-area">
+        <section className="top-area" id="top">
             <div className="information-card">
                 <div className="card-header">
                     <h2 className='title-text'>{t('title-text')}</h2>

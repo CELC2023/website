@@ -6,7 +6,7 @@ const About: React.FC = () => {
     const {t} = useTranslation();
 
     return (
-        <section className="about padded-section">
+        <section className="about padded-section" id="about">
             <div className="content">
                 <h2 className="title-blue">{t('about-title')}</h2>
                 <p className="text-grey"><Trans i18nKey={'about-description'}></Trans></p>
