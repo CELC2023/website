@@ -10,34 +10,19 @@
             color: $yellow-primary;
         }
     }
-    .content {
-        display: flex;
-        flex-direction: row;
-        overflow-x: scroll;
+    .content-container {
         width: 100%;
-        .card {
-            width: 250px;
-            height: 500px;
+        overflow: auto;
+        height: fit-content;
+        padding-bottom: 3%;
+        .content {
             display: flex;
-            flex-direction: column;
-            border-radius: 13px;
-            margin: 5px 25px;
-            padding: 10px;
-
-            &.congress1975 {
-                background-image: url('https://res.cloudinary.com/celc/image/upload/q_auto,f_auto/v1641688217/celc2023-static/congress1975_mpz2o0.png');
-            }
-
-            &.congress1994 {
-                background-image: url('https://res.cloudinary.com/celc/image/upload/q_auto,f_auto/v1641688217/celc2023-static/congress1994_f1uhsz.png');
-            }
-
-            &.cec2005 {
-                background-image: url('https://res.cloudinary.com/celc/image/upload/q_auto,f_auto/v1641688217/celc2023-static/cec2005_feux4p.png');
-            }
-
-            &.congress2016 {
-                background-image: url('https://res.cloudinary.com/celc/image/upload/q_auto,f_auto/v1641688217/celc2023-static/congress2016_ekrztv.png');
+            flex-direction: row;
+            width: max-content;
+            @media screen and (max-width: 700px){
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
             }
         }
     }

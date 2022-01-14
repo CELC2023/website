@@ -1,0 +1,71 @@
+@import "../styles/colors.scss";
+
+.mobile-nav-toggle {
+    @media screen and (max-width: 800px) {
+        display: block;
+        background-color: $yellow-primary;
+        border-radius: 50%;
+        padding: .75rem;
+        position: fixed;
+        z-index: 9999;
+        aspect-ratio: 1;
+        top: 2rem;
+        right: 2rem;
+        border: 0;
+    }
+    display: none;
+   
+}
+
+.primary-navigation {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    top: 0;
+
+    @media screen and (max-width: 800px) {
+        
+        transform: translateX(100%);
+        transition: transform 350ms ease-in;
+        inset: 0 0 0 30%;
+        background-color: $white-primary;
+        &[data-visible="true"] {
+            transform: translateX(0%);
+        }
+    }
+
+    .navigation-bar {
+        list-style: none;
+        background-color: $white-primary;
+        flex-direction: column;
+        gap: 2em;
+        margin: 0;
+        padding: 2em;
+        
+        @media screen and (min-width: 800px) {
+            height: 30px;
+            padding: 10px 15px;
+            flex-direction: row; 
+            justify-content: space-evenly;
+        }
+
+        a {
+            text-decoration: none;
+            color: $black-primary;
+            @media screen and (max-width: 800px) {
+                font-size: 1.5rem;
+            }
+        }
+        .logo-link {
+            height: fit-content;
+            img {
+                height: 85px;
+                padding: 0 10px 10px 10px;
+                transform: scale(1.4) translateY(-2px);
+            }
+        }
+        .language-toggle {
+            text-decoration: underline;
+        }
+    }
+}

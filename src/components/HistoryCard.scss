@@ -1,0 +1,65 @@
+@import "../styles/colors.scss";
+
+.card {
+    width: 25vw;
+    height: 500px;
+    display: flex;
+    flex-direction: column-reverse;
+    border-radius: 13px;
+    margin: 5px 25px;
+    padding: 10px;
+    color: $white-primary;
+    align-items: flex-end;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media screen and (max-width: 700px){
+        width: 80%;
+    }
+
+    [class^='past-conf'] {
+        font-weight: 900;
+        margin: 0;
+    }
+
+    .control-icon {
+        border-radius: 50%;
+        border: 2px solid $white-primary;
+        padding: 5px;
+        height: 1em;
+        width: 1em;
+    }
+
+    .past-conf- {
+        &title{
+            font-size: 2.5em;
+        }
+
+        &year {
+            font-size: 3.5em;
+        }
+    }
+
+    &.congress1975 {
+        background-image: url('https://res.cloudinary.com/celc/image/upload/q_auto,f_auto/v1641688217/celc2023-static/congress1975_mpz2o0.png');
+    }
+
+    &.congress1994 {
+        background-image: url('https://res.cloudinary.com/celc/image/upload/q_auto,f_auto/v1641688217/celc2023-static/congress1994_f1uhsz.png');
+    }
+
+    &.cec2005 {
+        background-image: url('https://res.cloudinary.com/celc/image/upload/q_auto,f_auto/v1641688217/celc2023-static/cec2005_feux4p.png');
+    }
+
+    &.congress2016 {
+        background-image: url('https://res.cloudinary.com/celc/image/upload/q_auto,f_auto/v1641688217/celc2023-static/congress2016_ekrztv.png');
+    }
+
+    &.cec2017 {
+        background-image: url('https://res.cloudinary.com/celc/image/upload/q_auto,f_auto/v1641688217/celc2023-static/cec2017_alj6qq.png');
+    }
+
+    &.cde2020 {
+        background-image: url('https://res.cloudinary.com/celc/image/upload/q_auto,f_auto/v1641688217/celc2023-static/cde2020_d3v1vp.png');
+    }
+}

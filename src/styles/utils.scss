@@ -1,0 +1,24 @@
+.flex {
+    display: flex;
+    &-column {
+        flex-direction: column;
+        &-r {
+            flex-direction: column-reverse;
+        }
+    }
+    &-row {
+        flex-direction: row;
+        &-r {
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+/** accessibility utilities **/
+
+.sr-only {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}

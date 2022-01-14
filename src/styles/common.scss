@@ -1,6 +1,7 @@
 @import "colors";
 @import "text";
 @import "buttons";
+@import "utils";
 
 body {
     display: flex;
@@ -8,35 +9,7 @@ body {
     margin: 0;
     font-family: Poppins;
     font-style: normal;
-    margin-top: 25px;
-}
-
-.navigation-bar {
-    height: 30px;
-    padding: 10px 15px;
-    position: fixed;
-    top: 0;
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
-    z-index: 2;
-    a {
-        text-decoration: none;
-        color: $black-primary;
-    }
-    .logo-link {
-        height: fit-content;
-        img {
-            height: 85px;
-            padding: 0 10px 10px 10px;
-            transform: scale(1.4) translateY(-2px);
-        }
-    }
-    .language-toggle {
-        text-decoration: underline;
-    }
+    overflow-x: hidden;
 }
 
 .content {
