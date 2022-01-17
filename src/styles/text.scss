@@ -20,6 +20,10 @@
     color: $grey-primary;
 }
 
+.all-caps {
+    text-transform: uppercase;
+}
+
 .no-select {
     /* from https://css-tricks.com/almanac/properties/u/user-select/ */ 
     -webkit-user-select: none;  /* Chrome all / Safari all */

@@ -22,7 +22,7 @@ const HistoryCard: React.FC<historyCardProps> = ({content, title, year}) => {
                 </> :
                 <>
                     <img className='control-icon closed' src={UpArrow} />
-                    <p className='past-conf-title no-select'>{title}</p>
+                    <p className='past-conf-name no-select'>{title}</p>
                     <p className='past-conf-year no-select'>{year.toFixed(0).slice(-2)}</p>
                 </>
             }

@@ -44,7 +44,7 @@ const History: React.FC = () => {
     return (
         <section className="history" id="history">
             <div className="title padded-section">
-                <h2>Conferences in <span className="emphasize">History</span></h2>
+                <h2 className='all-caps'>Conferences in <span className="emphasize">History</span></h2>
             </div>
             <div className="content-container">
                 <div className="content">

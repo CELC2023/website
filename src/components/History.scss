@@ -4,8 +4,12 @@
     background-color: $off-black-primary;
     .title {
         width: 60%;
-        font-size: 2.5rem;
+        font-size: 5rem;
         color: $white-primary;
+        line-height: 7rem;
+        h2 {
+            margin: 0;
+        }
         .emphasize {
             color: $yellow-primary;
         }

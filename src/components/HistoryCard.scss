@@ -1,12 +1,12 @@
 @import "../styles/colors.scss";
 
 .card {
+    height: 50vw;
     width: 25vw;
-    height: 500px;
     display: flex;
     flex-direction: column-reverse;
-    border-radius: 13px;
-    margin: 5px 25px;
+    border-radius: 3em;
+    margin: 5px 0.4em;
     padding: 1em 2em;
     color: $white-primary;
     align-items: flex-end;
@@ -30,12 +30,13 @@
     }
 
     .past-conf- {
-        &title{
+        &name{
             font-size: 2.5em;
         }
 
         &year {
-            font-size: 3.5em;
+            font-size: 5.5em;
+            line-height: 0.75em;
         }
     }
 
