@@ -7,7 +7,7 @@
     flex-direction: column-reverse;
     border-radius: 13px;
     margin: 5px 25px;
-    padding: 10px;
+    padding: 1em 2em;
     color: $white-primary;
     align-items: flex-end;
     background-repeat: no-repeat;
@@ -40,26 +40,68 @@
     }
 
     &.congress1975 {
-        background-image: url('https://res.cloudinary.com/celc/image/upload/q_auto,f_auto/v1641688217/celc2023-static/congress1975_mpz2o0.png');
+        $image: url('https://res.cloudinary.com/celc/image/upload/q_auto,f_auto/v1641688217/celc2023-static/congress1975_mpz2o0.png');
+        background-image: $image;
+        &.closed {
+            background-image: linear-gradient(0deg, rgba($black-primary, 0.2), rgba($black-primary, 0.2)), $image;
+        }
+        &.open {
+            background-image: linear-gradient(180deg, rgba($black-primary, 0.08) 0%, rgba($black-primary, 0.8) 100%), $image;
+        }
     }
 
     &.congress1994 {
-        background-image: url('https://res.cloudinary.com/celc/image/upload/q_auto,f_auto/v1641688217/celc2023-static/congress1994_f1uhsz.png');
+        $image: url('https://res.cloudinary.com/celc/image/upload/q_auto,f_auto/v1641688217/celc2023-static/congress1994_f1uhsz.png'), linear-gradient(180deg, $grey-primary 0%, $black-primary 99.99%);
+        background-image: $image;
+        &.closed {
+            background-image: linear-gradient(0deg, rgba($black-primary, 0.2), rgba($black-primary, 0.2)), $image;
+        }
+        &.open {
+            background-image: linear-gradient(180deg, rgba($black-primary, 0.08) 0%, rgba($black-primary, 0.8) 100%), $image;
+        }
     }
 
     &.cec2005 {
-        background-image: url('https://res.cloudinary.com/celc/image/upload/q_auto,f_auto/v1641688217/celc2023-static/cec2005_feux4p.png');
+        $image: url('https://res.cloudinary.com/celc/image/upload/q_auto,f_auto/v1641688217/celc2023-static/cec2005_feux4p.png'), linear-gradient(180deg, $grey-primary 0%, $black-primary 99.99%);
+        background-image: $image;
+        &.closed {
+            background-image: linear-gradient(0deg, rgba($black-primary, 0.2), rgba($black-primary, 0.2)), $image;
+        }
+        &.open {
+            background-image: linear-gradient(180deg, rgba($black-primary, 0.08) 0%, rgba($black-primary, 0.8) 100%), $image;
+        }
     }
 
     &.congress2016 {
-        background-image: url('https://res.cloudinary.com/celc/image/upload/q_auto,f_auto/v1641688217/celc2023-static/congress2016_ekrztv.png');
+        $image: url('https://res.cloudinary.com/celc/image/upload/q_auto,f_auto/v1641688217/celc2023-static/congress2016_ekrztv.png'), linear-gradient(180deg, $grey-primary 0%, $black-primary 99.99%);
+        background-image: $image;
+        &.closed {
+            background-image: linear-gradient(0deg, rgba($black-primary, 0.2), rgba($black-primary, 0.2)), $image;
+        }
+        &.open {
+            background-image: linear-gradient(180deg, rgba($black-primary, 0.08) 0%, rgba($black-primary, 0.8) 100%), $image;
+        }
     }
 
     &.cec2017 {
-        background-image: url('https://res.cloudinary.com/celc/image/upload/q_auto,f_auto/v1641688217/celc2023-static/cec2017_alj6qq.png');
+        $image: url('https://res.cloudinary.com/celc/image/upload/q_auto,f_auto/v1641688217/celc2023-static/cec2017_alj6qq.png'), linear-gradient(180deg, $grey-primary 0%, $black-primary 99.99%);
+        background-image: $image;
+        &.closed {
+            background-image: linear-gradient(0deg, rgba($black-primary, 0.2), rgba($black-primary, 0.2)), $image;
+        }
+        &.open {
+            background-image: linear-gradient(180deg, rgba($black-primary, 0.08) 0%, rgba($black-primary, 0.8) 100%), $image;
+        }
     }
 
     &.cde2020 {
-        background-image: url('https://res.cloudinary.com/celc/image/upload/q_auto,f_auto/v1641688217/celc2023-static/cde2020_d3v1vp.png');
+        $image: url('https://res.cloudinary.com/celc/image/upload/q_auto,f_auto/v1641688217/celc2023-static/cde2020_d3v1vp.png'), linear-gradient(180deg, $grey-primary 0%, $black-primary 99.99%);
+        background-image: $image;
+        &.closed {
+            background-image: linear-gradient(0deg, rgba($black-primary, 0.2), rgba($black-primary, 0.2)), $image;
+        }
+        &.open {
+            background-image: linear-gradient(180deg, rgba($black-primary, 0.08) 0%, rgba($black-primary, 0.8) 100%), $image;
+        }
     }
 }

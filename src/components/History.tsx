@@ -1,39 +1,43 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './History.scss';
 import HistoryCard from './HistoryCard';
 
 const History: React.FC = () => {
 
+    const {t} = useTranslation();
+
+
     const historyList = [
         {
             title: 'Congress',
             year: 1975,
-            content: 'The Canadian Engineering Leadership Conference (CELC) is an annual, bilingual, student-run conference that attracts over 200 student leaders from 46 universities across the country.'
+            content: t('history-75congress')
         },
         {
             title: 'Congress',
             year: 1994,
-            content: 'The Canadian Engineering Leadership Conference (CELC) is an annual, bilingual, student-run conference that attracts over 200 student leaders from 46 universities across the country.'
+            content: t('history-94congress')
         },
         {
             title: 'CEC',
             year: 2005,
-            content: 'The Canadian Engineering Leadership Conference (CELC) is an annual, bilingual, student-run conference that attracts over 200 student leaders from 46 universities across the country.'
+            content: t('history-05cec')
         },
         {
             title: 'Congress',
             year: 2016,
-            content: 'The Canadian Engineering Leadership Conference (CELC) is an annual, bilingual, student-run conference that attracts over 200 student leaders from 46 universities across the country.'
+            content: t('history-16congress')
         },
         {
             title: 'CEC',
             year: 2017,
-            content: 'The Canadian Engineering Leadership Conference (CELC) is an annual, bilingual, student-run conference that attracts over 200 student leaders from 46 universities across the country.'
+            content: t('history-17cec')
         },
         {
             title: 'CDE',
             year: 2020,
-            content: 'The Canadian Engineering Leadership Conference (CELC) is an annual, bilingual, student-run conference that attracts over 200 student leaders from 46 universities across the country.'
+            content: t('history-20cde')
         },
     ]
 

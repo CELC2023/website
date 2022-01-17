@@ -13,7 +13,7 @@ const HistoryCard: React.FC<historyCardProps> = ({content, title, year}) => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
     return (
-        <div className={`card ${title.toLowerCase()}${year.toFixed(0)} no-select`} onClick={() => setIsOpen(!isOpen)}>
+        <div className={`card ${title.toLowerCase()}${year.toFixed(0)} no-select ${isOpen ? 'open' : 'closed'}`} onClick={() => setIsOpen(!isOpen)}>
             {
                 isOpen ?
                 <>
