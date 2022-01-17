@@ -1,77 +1,187 @@
 @import "../styles/colors.scss";
 
+$bu: 2.5rem;
+$bvh: 400px;
+
 .bands {
     .band-container {
-        position: relative;
-        .band {
-            color: $white-primary;
-            font-weight: 600;
-            &.blue {
-                background-color: $blue-primary; 
-             }
-            &.red {
-               background-color: $red-primary; 
+        height: $bvh;
+        width: 100vw;
+        overflow: hidden;
+        .band-area {
+            transform: translate(0, -$bvh);
+            transition: 1s ease-in-out;
+            position: relative;
+            height: calc(3 * $bvh);
+            width: 200vw;
+            &.diversity-view {
+                transform: translate(0, -2 * $bvh);
+                transition: 1s ease-in-out;
             }
-            &.yellow {
-                background-color: $yellow-primary; 
-             }
-        }
+            &.sustainability-view {
+                transform: translate(-100vw, -$bvh);
+                transition: 1s ease-in-out;
+            }
+            &.technology-view {
+                transform: translate(0, 0);
+                transition: 1s ease-in-out;
+            }
+            .band {
+                color: $white-primary;
+                font-weight: 600;
+                pointer-events: none;
+                &.blue {
+                    background-color: $blue-primary; 
+                 }
+                &.red {
+                   background-color: $red-primary; 
+                }
+                &.yellow {
+                    background-color: $yellow-primary; 
+                 }
+            }
+    
+            #diversity-container {
+                position: absolute;
+                width: 97.5%;
+                left: 2.5%;
+                bottom: 0;
+                height: 775px;
+            }
 
-        #diversity-outer {
-            border-bottom: 1.5em solid $yellow-primary;
-            border-right: 1.5em solid $yellow-primary;
-            height: 300px;
-            position: absolute;
-            left: 0;
-            width: 75%;
-            border-radius: 0 0 50px 0;
-            top: -200px;
-        }
+            #diversity-bottom-left {
+                border-left: $bu solid $yellow-primary;
+                border-top: $bu solid $yellow-primary;
+                position: absolute;
+                top: 250px;
+                height: 525px;
+                border-radius: 8*$bu 0 0 0;
+                width: 5%;
+            }
 
-        #diversity-band {
-            margin-top: 0px;
-            margin-bottom: 0px;
-            position: relative;
-            bottom: -18.75em;
-            text-align: center;
-        }
+            #diversity-band {
+                margin-top: 0px;
+                margin-bottom: 0px;
+                position: absolute;
+                text-align: center;
+                top: 250px;
+                height: $bu;
+                width: 25%;
+                left: calc(5% + $bu);
+                background-color: $yellow-primary;
+                pointer-events: fill;
+                font-size: calc($bu - 1rem);
+            }
 
+            #diversity-bottom-right {
+                border-right: $bu solid $yellow-primary;
+                border-bottom: $bu solid $yellow-primary;
+                position: absolute;
+                height: 100px;
+                width: 15%;
+                top: 150px;
+                left: 30.75%;
+                border-radius: 0 0 8em 0;
+            }
 
-        #technology-outer {
-            border-bottom: 1.5em solid $blue-primary;
-            border-right: 1.5em solid $blue-primary;
-            height: 300px;
-            position: absolute;
-            left: 0;
-            width: 65%;
-            border-radius: 0 0 50px 0;
-            top: -300px;
-        }
+            #diversity-top-right {
+                border-left: $bu solid $yellow-primary;
+                border-top: $bu solid $yellow-primary;
+                position: absolute;
+                height: 126px;
+                width: calc(52.5% + $bu);
+                top: 0;
+                left: 45.75%;
+                border-radius: 8*$bu 0 0 0;
+            }
+    
+            #technology-outer {
+                border-bottom: $bu solid $blue-primary;
+                border-right: $bu solid $blue-primary;
+                height: 600px;
+                position: absolute;
+                left: 0;
+                width: 45%;
+                border-radius: 0 0 8*$bu 0;
+                top: 0;
+            }
+    
+            #technology-band {
+                margin-top: 0px;
+                margin-bottom: 0px;
+                position: absolute;
+                bottom: -$bu;
+                left: 40%;
+                text-align: center;
+                pointer-events: fill;
+                font-size: calc($bu - 1rem);
+            }
+    
+            #sustainability-outer {
+                border-top: $bu solid $red-primary;
+                border-left: $bu solid $red-primary;
+                height: 700px;
+                position: absolute;
+                width: calc(95% - $bu);
+                left: 5%;
+                border-radius: 8*$bu 0 0 0;
+                top: 500px;
+            }
+    
+            #sustainability-band {
+                margin-top: 0px;
+                margin-bottom: 0px;
+                position: absolute;
+                top: -$bu;
+                left: 20%;
+                pointer-events: fill;
+                font-size: calc($bu - 1rem);
+            }
 
-        #technology-band {
-            margin-top: 0px;
-            margin-bottom: 0px;
-            position: relative;
-            bottom: -18.75em;
-            text-align: center;
-        }
-
-        #sustainability-outer {
-            border-top: 1.5em solid $red-primary;
-            border-left: 1.5em solid $red-primary;
-            height: 300px;
-            position: absolute;
-            right: 0;
-            width: 60%;
-            border-radius: 50px 0 0 0;
-            top: -75px;
-        }
-
-        #sustainability-band {
-            margin-top: 0px;
-            margin-bottom: 0px;
-            position: relative;
-            top: -1.5em;
+            .content-area {
+                position: absolute;
+                flex-direction: column;
+                color: $off-black-primary;
+                pointer-events: fill;
+                >h2 {
+                    margin: 0;
+                }
+                >p {
+                    margin-top: 0;
+                }
+                &.diversity {
+                    bottom: 0;
+                    left: 7%;
+                    width: 40%;
+                    align-items: flex-end;
+                    text-align: right;
+                    height: 400px;
+                }
+                &.sustainability {
+                    right: 1.5%;
+                    width: 50%;
+                }
+                &.technology {
+                    left: 1.5%;
+                    width: 95%;
+                }
+                .control {
+                    border-radius: 50%;
+                    border: 2px solid $blue-primary;
+                    padding: 5px;
+                    height: 1em;
+                    width: 1em;
+                    &-left {
+                        transform: rotate(-90deg);
+                    }
+                    &-down {
+                        transform: rotate(180deg);
+                    }
+                }
+                .band-content-header {
+                    font-size: 2.5em;
+                }
+            }
         }
     }
 
