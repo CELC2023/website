@@ -39,6 +39,22 @@ $bvh: 400px;
                 &.yellow {
                     background-color: $yellow-primary; 
                  }
+                 .band-expand-arrow {
+                    border-radius: 50%;
+                    border: 2px solid $white-primary;
+                    padding: 5px;
+                    height: .75em;
+                    width: .75em;
+                    margin-left: 1em;
+                    vertical-align: middle;
+                    cursor: pointer;
+                    &.arrow-right {
+                        transform: rotate(90deg);
+                    }
+                    &.arrow-left {
+                        transform: rotate(-90deg);
+                    }
+                 }
             }
     
             #diversity-container {

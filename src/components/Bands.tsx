@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './Bands.scss';
 import BandArrow from '../images/icons/band-arrow.svg';
+import UpArrow from '../images/icons/up-arrow.svg';
 
 const Bands: React.FC = () => {
     const {t} = useTranslation();
@@ -18,7 +19,9 @@ const Bands: React.FC = () => {
             <div className="body band-container">
                 <div className={`band-area ${bandView === '' ? '' : `${bandView}-view`}`}>
                     <div className="band" id="sustainability-outer">
-                        <p id="sustainability-band" onClick={() => setBandView('sustainability')}>{t('bands-sustinability')}</p>
+                        <p id="sustainability-band" onClick={() => setBandView('sustainability')}>{t('bands-sustinability')}
+                            <img src={UpArrow} className='band-expand-arrow arrow-right' />
+                        </p>
                         <div className='content-area sustainability flex'>
                             <h2 className='all-caps band-content-header'>{t('bands-sustinability')}</h2>
                             <p>The Canadian Engineering Leadership Conference (CELC) is an annual, bilingual, student-run conference that attracts over 200 student leaders from 46 universities across the country. The Canadian Engineering Leadership Conference (CELC) is an annual, bilingual, student-run conference that attracts over 200 student leaders from 46 universities across the country.
@@ -28,7 +31,9 @@ The Canadian Engineering Leadership Conference (CELC) is an annual, bilingual, s
                         </div>
                     </div>
                     <div className="band" id="technology-outer">
-                        <p id="technology-band" onClick={() => setBandView('technology')}>{t('bands-tech')}</p>
+                        <p id="technology-band" onClick={() => setBandView('technology')}>{t('bands-tech')}
+                            <img src={UpArrow} className='band-expand-arrow arrow-right' />
+                        </p>
                         <div className='content-area technology flex'>
                             <h2 className='all-caps band-content-header'>{t('bands-tech')}</h2>
                             <p>The Canadian Engineering Leadership Conference (CELC) is an annual, bilingual, student-run conference that attracts over 200 student leaders from 46 universities across the country. The Canadian Engineering Leadership Conference (CELC) is an annual, bilingual, student-run conference that attracts over 200 student leaders from 46 universities across the country.
@@ -39,7 +44,9 @@ The Canadian Engineering Leadership Conference (CELC) is an annual, bilingual, s
                     </div>
                     <div className='band' id='diversity-container'>
                         <div id='diversity-bottom-left' />
-                        <p id="diversity-band" onClick={() => setBandView('diversity')}>{t('bands-diversity')}</p>
+                        <p id="diversity-band" onClick={() => setBandView('diversity')}>{t('bands-diversity')}
+                            <img src={UpArrow} className='band-expand-arrow arrow-left' />
+                        </p>
                         <div id='diversity-bottom-right' />
                         <div id='diversity-top-right' />
                         <div id='diversity-top' />
