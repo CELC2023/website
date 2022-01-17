@@ -18,8 +18,8 @@ const TopArea: React.FC = () => {
                     <a className="button-outlined-grey">{t('title-learn')}</a>
                 </div>
                 <div className="card-details">
-                    <p className="location">{t('title-downtown')}</p>
-                    <p className="date" >{t('title-date')}</p>
+                    <p className="location descriptor">{t('title-downtown')}</p>
+                    <p className="date descriptor" >{t('title-date')}</p>
                 </div>
             </div>
             <p className="location-tag">{t('title-image-location')}</p>
