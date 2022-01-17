@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import './History.scss';
 import HistoryCard from './HistoryCard';
 
@@ -10,32 +10,38 @@ const History: React.FC = () => {
 
     const historyList = [
         {
-            title: 'Congress',
+            backgroundClass: 'congress1975',
+            title: t('history-congress'),
             year: 1975,
             content: t('history-75congress')
         },
         {
-            title: 'Congress',
+            backgroundClass: 'congress1994',
+            title: t('history-congress'),
             year: 1994,
             content: t('history-94congress')
         },
         {
-            title: 'CEC',
+            backgroundClass: 'cec2005',
+            title: t('history-cec'),
             year: 2005,
             content: t('history-05cec')
         },
         {
-            title: 'Congress',
+            backgroundClass: 'congress2016',
+            title: t('history-congress'),
             year: 2016,
             content: t('history-16congress')
         },
         {
-            title: 'CEC',
+            backgroundClass: 'cec2017',
+            title: t('history-cec'),
             year: 2017,
             content: t('history-17cec')
         },
         {
-            title: 'CDE',
+            backgroundClass: 'cde2020',
+            title: t('history-cde'),
             year: 2020,
             content: t('history-20cde')
         },
@@ -44,13 +50,13 @@ const History: React.FC = () => {
     return (
         <section className="history" id="history">
             <div className="title padded-section">
-                <h2 className='all-caps'>Conferences in <span className="emphasize">History</span></h2>
+                <h2 className='all-caps'><Trans i18nKey={'history-title'}></Trans></h2>
             </div>
             <div className="content-container">
                 <div className="content">
                     {
                         historyList.map((h) => {
-                            return <HistoryCard content={h.content} key={h.title+h.year.toFixed(0)} title={h.title} year={h.year} />
+                            return <HistoryCard backgroundClass={h.backgroundClass} content={h.content} key={h.title+h.year.toFixed(0)} title={h.title} year={h.year} />
                         })
                     }
                 </div>

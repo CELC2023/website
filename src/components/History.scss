@@ -9,9 +9,9 @@
         line-height: 7rem;
         h2 {
             margin: 0;
-        }
-        .emphasize {
-            color: $yellow-primary;
+            strong {
+                color: $yellow-primary;
+            }
         }
     }
     .content-container {
