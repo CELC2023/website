@@ -25,7 +25,7 @@ const NavBar: React.FC = () => {
       url: '/#sponsor'
     }, {
       text: t('navbar-faq'),
-      url: '/#faw'
+      url: '/#faq'
     },/* {
       text: t('navbar-contact'),
       url: '/#contact'
