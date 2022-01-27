@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import './Bands.scss';
 import BandArrow from '../images/icons/band-arrow.svg';
 import UpArrow from '../images/icons/up-arrow.svg';
+import FooterImage from '../images/bands-bottom.svg';
 
 const Bands: React.FC = () => {
     const {t} = useTranslation();
@@ -61,6 +62,7 @@ The Canadian Engineering Leadership Conference (CELC) is an annual, bilingual, s
                 </div>
             </div>
             <div className="footer">
+                <img className='footer-image' src={FooterImage} />
             </div>
         </section>
     )

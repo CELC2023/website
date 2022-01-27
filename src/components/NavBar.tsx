@@ -10,25 +10,33 @@ const NavBar: React.FC = () => {
   const { t } = useTranslation();
   const [mobileNavigationToggle, setMobileNavigationToggle] = useState<boolean>(false);
 
+  const localizedPrefix = (link: string) => {
+    if(language === 'en') {
+      return link;
+    } else {
+      return `/${language}${link}`
+    }
+  }
+
   const navBarLinks = [
     {
       text: t('navbar-home'),
-      url: '/#top'
+      url: localizedPrefix('/#top')
     }, {
       text: t('navbar-about'),
-      url: '/#about'
+      url: localizedPrefix('/#about')
     }, {
       text: t('navbar-history'),
-      url: '/#history'
+      url: localizedPrefix('/#history')
     }, {
       text: t('navbar-why'),
-      url: '/#sponsor'
+      url: localizedPrefix('/#sponsor')
     }, {
       text: t('navbar-faq'),
-      url: '/#faq'
+      url: localizedPrefix('/#faq')
     },/* {
       text: t('navbar-contact'),
-      url: '/#contact'
+      url: localizedPrefix('/#contact')
     } */
   ]
 
@@ -44,7 +52,7 @@ const NavBar: React.FC = () => {
             navBarLinks.map((l, i) => {
               return (
                 <li key={`navcont-${i}`}>
-                  <AnchorLink to={l.url} stripHash title={l.text} />
+                  <AnchorLink className="all-caps nav-text" to={l.url} stripHash title={l.text} />
                 </li>
               )
             })
@@ -59,7 +67,7 @@ const NavBar: React.FC = () => {
             if(lang !== language) {
               return (
                 <li key={`navcont-ls-${lang}`}>
-                  <Link className="language-toggle" to={originalPath} language={lang} key={lang}>
+                  <Link className="language-toggle all-caps" to={originalPath} language={lang} key={lang}>
                     {lang}
                   </Link>
                 </li>

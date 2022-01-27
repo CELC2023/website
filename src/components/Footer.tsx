@@ -7,15 +7,12 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="footer">
-      <div className="decoration"></div>
       <div className="text">
-        <div>
-          <span>{t('footer-land')}</span>
-          <span className="divider">|</span>
-          <span>{t('footer-ucalgary')}</span>
-          <span className="divider">|</span>
-          <span>{t('footer-cfes')}</span>
-        </div>
+        <span>{t('footer-land')}</span>
+        <span className="divider">|</span>
+        <span>{t('footer-ucalgary')}</span>
+        <span className="divider">|</span>
+        <span>{t('footer-cfes')}</span>
       </div>
     </footer>
   )

@@ -2,6 +2,7 @@ import { graphql } from "gatsby"
 import * as React from "react"
 import About from "../components/About"
 import Bands from "../components/Bands"
+import CommitteeListing from "../components/CommitteeListing"
 import FAQ from "../components/Faq"
 import History from "../components/History"
 
@@ -23,6 +24,7 @@ const IndexPage: React.FC = () => (
     <Sponsor />
     <PastSponsor />
     <FAQ />
+    <CommitteeListing />
   </Layout>
 )
 
