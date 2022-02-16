@@ -202,10 +202,11 @@ $bvh: 400px;
     }
 
     .footer {
-        width: 200%;
+        width: 100%;
         display: flex;
+        overflow-x: hidden;
         .footer-image {
-            width: 100%;
+            width: 200%;
             z-index: 5;
         }
     }
