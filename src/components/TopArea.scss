@@ -10,10 +10,14 @@
         position: absolute;
         height: 900px;
         overflow: hidden;
-        .title-image-slide {
-            width: 100vw;
-            height: 900px;
+        .image-pane {
+            display: inline-flex;
+            .title-image-slide {
+                width: 100vw;
+                height: 900px;
+            }
         }
+        
     }
     .information-card {
         background-color: $white-primary;

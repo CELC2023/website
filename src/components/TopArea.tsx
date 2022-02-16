@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import './TopArea.scss'
 
@@ -28,21 +28,23 @@ const TopArea: React.FC = () => {
     ]
 
     const [imageIndex, setImageIndex] = useState<number>(0);
+    const timeout = useRef(null);
+    const delay = 10000;
 
-    // useEffect(() => {
-    //     setTimeout(
-    //         () => setImageIndex((i) => i === images.length - 1 ? 0 : i + 1),
-    //         10000
-    //     );
-
-    //     return () => {}
-    // }, [imageIndex])
+    useEffect(() => {
+        timeout.current && clearTimeout(timeout.current);
+        timeout.current = setTimeout(
+            () =>setImageIndex((i) => i === images.length - 1 ? 0 : i + 1),
+            delay
+        )
+        return () => { timeout.current && clearTimeout(timeout.current) }
+    }, [imageIndex])
 
     return (
         
         <section className="top-area" id="top">
             <div className='title-image-container' >
-                <div className='image-pane' style={{width: `${images.length * 100}vw`}}>
+                <div className='image-pane' style={{width: `${images.length * 100}vw`, transform: `translateX(-${imageIndex * 100}vw)`}}>
                     {
                         images.map((e, i) => {
                             return (
