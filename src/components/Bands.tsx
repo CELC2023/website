@@ -8,9 +8,6 @@ import FooterImage from '../images/bands-bottom.svg';
 const Bands: React.FC = () => {
     const {t} = useTranslation();
     const [bandView, setBandView] = useState<string>('');
-    useEffect(() => {
-        console.log(bandView)
-    }, [])
 
     return (
         <section className='bands' id='bands'>
