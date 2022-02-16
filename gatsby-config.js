@@ -1,4 +1,5 @@
 require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
     title: `CELC 2023`,
@@ -6,6 +7,20 @@ module.exports = {
     author: `CELC 2023 Organizing Committee`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-firebase`,
+      options: {
+        credentials: {
+          apiKey: process.env.FIREBASE_API_KEY,
+          authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+          projectId: process.env.FIREBASE_PROJECT_ID,
+          storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+          messagingSenderId: process.env.FIREBASE_MSG_SDR,
+          appId: process.env.FIREBASE_APP_ID,
+          measurementId: process.env.FIREBASE_MEASUREMENT,
+        }
+      }
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
