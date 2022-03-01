@@ -7,22 +7,22 @@ const TopArea: React.FC = () => {
 
     const images = [
         {
-            url: 'https://res.cloudinary.com/celc/image/upload/v1641688217/celc2023-static/header-banner.png',
+            url: 'https://res.cloudinary.com/celc/image/upload/c_scale,q_auto:good,w_1080/v1641688217/celc2023-static/header-banner.png',
             location: t('title-image-elliston')
         }, {
-            url:'https://res.cloudinary.com/celc/image/upload/v1641965733/celc2023-static/jasper-national-park.png',
+            url:'https://res.cloudinary.com/celc/image/upload/c_scale,q_auto:good,w_1080/v1641965733/celc2023-static/jasper-national-park.png',
             location: t('title-image-jasper')
         }, {
-            url:'https://res.cloudinary.com/celc/image/upload/v1641965712/celc2023-static/st-patricks-island.png',
+            url:'https://res.cloudinary.com/celc/image/upload/c_scale,q_auto:good,w_1080/v1641965712/celc2023-static/st-patricks-island.png',
             location: t('title-image-stpatrick-island')
         }, {
-            url:'https://res.cloudinary.com/celc/image/upload/v1641965814/celc2023-static/drumheller.png',
+            url:'https://res.cloudinary.com/celc/image/upload/c_scale,q_auto:good,w_1080/v1641965814/celc2023-static/drumheller.png',
             location: t('title-image-drumheller')
         }, {
-            url: 'https://res.cloudinary.com/celc/image/upload/v1641965692/celc2023-static/lake-minnewanja.png',
+            url: 'https://res.cloudinary.com/celc/image/upload/c_scale,q_auto:good,w_1080/v1641965692/celc2023-static/lake-minnewanja.png',
             location: t('title-image-lakeminnewanka')
         }, {
-            url: 'https://res.cloudinary.com/celc/image/upload/v1641965758/celc2023-static/maligne-canyon.png',
+            url: 'https://res.cloudinary.com/celc/image/upload/c_scale,q_auto:good,w_1080/v1641965758/celc2023-static/maligne-canyon.png',
             location: t('title-image-malignecanyon')
         }
     ]

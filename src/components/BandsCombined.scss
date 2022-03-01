@@ -1,0 +1,281 @@
+@import "../styles/colors.scss";
+
+$bu: 2.5rem;
+
+$bw: 20vw;
+$bh: 80px;
+
+$bvh: 6 * $bh;
+$bvw: 5 * $bw;
+
+.bands {
+    position: relative;
+    margin-bottom: -$bh;
+    .about {
+        position: relative;
+        height: 7 * $bh;
+
+        .about-text {
+            width: 2.5 * $bw;
+        }
+        .about-canada-map {
+            width: 4 * $bw;
+            position: absolute;
+            bottom: -$bh;
+            right: -1.75 * $bw;
+            z-index: 1;
+        }
+    }
+    .band-container {
+        height: 9 * $bh;
+        width: $bvw;
+        overflow: hidden;
+        position: relative;
+        top: - 2 * $bh;
+        .band-area {
+            div {
+                box-sizing: border-box;
+            }
+            transform: translate(0, - 4.5 * $bh);
+            transition: 1s ease-in-out;
+            position: relative;
+            width: 20 * $bw;
+            height: 20 * $bh;
+            &.diversity-view {
+                transform: translate(0, -8 * $bh);
+                transition: 1s ease-in-out;
+            }
+            &.sustainability-view {
+                transform: translate(-4.5 * $bw, -4 * $bh);
+                transition: 1s ease-in-out;
+            }
+            &.technology-view {
+                transform: translate(0, 0);
+                transition: 1s ease-in-out;
+            }
+    
+            .bands-title {
+                position: absolute;
+                top: 6 * $bh;
+                left: 0.5 * $bw;
+                max-width: 3 * $bw;
+                line-height: 1;
+            }
+    
+            .band {
+                color: $white-primary;
+                font-weight: 600;
+                pointer-events: none;
+                &.blue {
+                    background-color: $blue-primary;   
+                }
+                &.red {
+                    background-color: $red-primary; 
+                }
+                &.yellow {
+                    background-color: $yellow-primary; 
+                }
+                .hidden {
+                    color: transparent;
+                    transition: 0.2s ease-out;
+                    
+                }
+                .band-expand-arrow {
+                    border-radius: 50%;
+                    border: 2px solid $white-primary;
+                    padding: 5px;
+                    height: .75em;
+                    width: .75em;
+                    margin: 0 1em;
+                    vertical-align: middle;
+                    cursor: pointer;
+                    &.hidden {
+                        opacity: 0;
+                        transition: 0.2s ease-out;
+                    }
+                    &.arrow-right {
+                        transform: rotate(90deg);
+                    }
+                    &.arrow-left {
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
+    
+            #diversity-container {
+                position: absolute;
+                width: 9.5 * $bw;
+                left: 0.5 * $bw;
+                height: 9 * $bh;
+                top: $bvh;
+            }
+    
+            #diversity-bottom-left {
+                border-left: $bu solid $yellow-primary;
+                border-top: $bu solid $yellow-primary;
+                position: absolute;
+                top: 4 * $bh;
+                height: 8 * $bh;
+                border-radius: 6 * $bu 0 0 0;
+                width: $bw;
+            }
+    
+            #diversity-band {
+                margin-top: 0px;
+                margin-bottom: 0px;
+                position: absolute;
+                text-align: center;
+                top: 4 * $bh;
+                height: $bu;
+                width: calc(2 * $bw + 4px);
+                left: calc($bw - 2px);
+                background-color: $yellow-primary;
+                pointer-events: fill;
+                font-size: calc($bu - 1rem);
+            }
+    
+            #diversity-bottom-right {
+                border-right: $bu solid $yellow-primary;
+                border-bottom: $bu solid $yellow-primary;
+                position: absolute;
+                height: calc(1.5 * $bh + $bu + 2px);
+                width: calc(0.75 * $bw + 2 * $bu);
+                top: calc(2.5 * $bh - 2px);
+                left: 3 * $bw;
+                border-radius: 0 0 8 * $bu 0;
+            }
+    
+            #diversity-top-right {
+                border-left: $bu solid $yellow-primary;
+                border-top: $bu solid $yellow-primary;
+                position: absolute;
+                height: 2 * $bh;
+                width: 5.5 * $bw;
+                top: 0.5 * $bh;
+                left: calc(3.75 * $bw + $bu);
+                border-radius: 8 * $bu 0 0 0;
+                box-sizing: border-box;
+            }
+    
+            #technology-outer {
+                border-bottom: $bu solid $blue-primary;
+                border-right: $bu solid $blue-primary;
+                height: 9.5 * $bh;
+                position: absolute;
+                left: 0;
+                width: 4.5 * $bw;
+                border-radius: 0 0 6*$bu 0;
+                top: 0;
+                box-sizing: border-box;
+            }
+    
+            #technology-band {
+                margin-top: 0px;
+                margin-bottom: 0px;
+                position: absolute;
+                bottom: -$bu;
+                left: 40%;
+                text-align: center;
+                pointer-events: fill;
+                font-size: calc($bu - 1rem);
+            }
+    
+            #sustainability-outer {
+                border-top: $bu solid $red-primary;
+                border-left: $bu solid $red-primary;
+                height: 10 * $bh;
+                position: absolute;
+                width: 8.5 * $bw;
+                left: $bw;
+                border-radius: 8*$bu 0 0 0;
+                top: 8 * $bh;
+            }
+    
+            #sustainability-band {
+                margin-top: 0px;
+                margin-bottom: 0px;
+                position: absolute;
+                top: -$bu;
+                left: 1.25 * $bw;
+                pointer-events: fill;
+                font-size: calc($bu - 1rem);
+            }
+    
+            .content-area {
+                position: absolute;
+                flex-direction: column;
+                color: $off-black-primary;
+                pointer-events: fill;
+                opacity: 1;
+                transition: 1.2s ease-in;
+                >h2 {
+                    margin: 0;
+                }
+                >p {
+                    margin-top: 0;
+                }
+                &.hidden {
+                    opacity: 0;
+                    transition: 0.2s ease-out;
+                }
+                &.diversity {
+                    left: $bw;
+                    width: 3 * $bw;
+                    align-items: flex-end;
+                    text-align: right;
+                    height: 400px;
+                    top: 5 * $bh;
+                }
+                &.sustainability {
+                    left: 4 * $bw;
+                    width: 4 * $bw;
+                    top: -1.25 * $bh;
+                    >p {
+                        margin-top: 1.5 * $bu;
+                    }
+                }
+                &.technology {
+                    left: 0.5 * $bw;
+                    width: 3.5 * $bw;
+                    top: 2.5 *$bh;
+                }
+                .control {
+                    border-radius: 50%;
+                    border: 2px solid $blue-primary;
+                    padding: 5px;
+                    height: 1em;
+                    width: 1em;
+                    &-left {
+                        transform: rotate(-90deg);
+                    }
+                    &-down {
+                        transform: rotate(180deg);
+                    }
+                }
+                .band-content-header {
+                    font-size: 2.5em;
+                }
+            }
+        }
+    }
+
+    .footer {
+        width: 100%;
+        display: flex;
+        overflow-x: hidden;
+        position: absolute;
+        bottom: $bh;
+        pointer-events: none;
+        .footer-image {
+            width: 200%;
+            z-index: 5;
+            transition: ease-in-out 1s;
+            &.right-view {
+                transform: translate(-100vw, 0);
+                transition: ease-in-out 1s;
+            }
+        }
+    }
+}
+
+// 
