@@ -38,15 +38,26 @@
         list-style: none;
         background-color: $white-primary;
         flex-direction: column;
-        gap: 2em;
         margin: 0;
         padding: 2em;
-        
         @media screen and (min-width: 800px) {
             height: 30px;
-            padding: 10px 15px;
+            padding: 20px 15px 15px 15px;
             flex-direction: row; 
-            justify-content: space-evenly;
+            .navbar-link {
+                margin: 0 1em;
+            }
+            .navbar-logo {
+                margin-left: auto;
+                margin-right: 1em;
+            }
+            .navbar-lang {
+                margin: 0 1em;
+            }     
+        }
+
+        @media screen and (max-width: 800px) {
+            gap: 2em;
         }
 
         a {

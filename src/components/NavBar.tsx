@@ -4,6 +4,7 @@ import HeaderLogo from "../images/header-logo.svg";
 import NavToggleIcon from "../images/icons/menu-icon.svg"
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import "./NavBar.scss";
+import { languages as langConsts } from "../utils/languageConstants";
 
 const NavBar: React.FC = () => {
   const { language, languages, originalPath} = useI18next()
@@ -21,19 +22,24 @@ const NavBar: React.FC = () => {
   const navBarLinks = [
     {
       text: t('navbar-home'),
-      url: localizedPrefix('/#top')
+      url: localizedPrefix('/#top'),
+      class: 'navbar-link'
     }, {
       text: t('navbar-about'),
-      url: localizedPrefix('/#about')
+      url: localizedPrefix('/#about'),
+      class: 'navbar-link'
     }, {
       text: t('navbar-history'),
-      url: localizedPrefix('/#history')
+      url: localizedPrefix('/#history'),
+      class: 'navbar-link'
     }, {
       text: t('navbar-why'),
-      url: localizedPrefix('/#sponsor')
+      url: localizedPrefix('/#sponsor'),
+      class: 'navbar-link'
     }, {
       text: t('navbar-faq'),
-      url: localizedPrefix('/#faq')
+      url: localizedPrefix('/#faq'),
+      class: 'navbar-link'
     },/* {
       text: t('navbar-contact'),
       url: localizedPrefix('/#contact')
@@ -51,13 +57,13 @@ const NavBar: React.FC = () => {
           {
             navBarLinks.map((l, i) => {
               return (
-                <li key={`navcont-${i}`}>
+                <li key={`navcont-${i}`} className={l.class || ''}>
                   <AnchorLink className="all-caps nav-text" to={l.url} stripHash title={l.text} />
                 </li>
               )
             })
           }
-          <li key={`navcont-logo`}>
+          <li key={`navcont-logo`} className="navbar-logo" >
             <AnchorLink className="logo-link" stripHash to="/#top" >
               <img src={HeaderLogo} draggable={false} />
             </AnchorLink>
@@ -66,9 +72,9 @@ const NavBar: React.FC = () => {
           languages.map((lang) => {
             if(lang !== language) {
               return (
-                <li key={`navcont-ls-${lang}`}>
+                <li key={`navcont-ls-${lang}`} className="navbar-lang">
                   <Link className="language-toggle all-caps" to={originalPath} language={lang} key={lang}>
-                    {lang}
+                    {langConsts[lang]}
                   </Link>
                 </li>
                
