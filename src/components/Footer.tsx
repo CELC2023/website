@@ -8,11 +8,11 @@ const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="text">
-        <span>{t('footer-land')}</span>
+        <span className="footer-text-primary">{t('footer-land')}</span>
         <span className="divider">|</span>
-        <span>{t('footer-ucalgary')}</span>
+        <span className="footer-text-secondary">{t('footer-ucalgary')}</span>
         <span className="divider">|</span>
-        <span>{t('footer-cfes')}</span>
+        <span className="footer-text-secondary">{t('footer-cfes')}</span>
       </div>
     </footer>
   )

@@ -14,16 +14,33 @@ $bvw: 5 * $bw;
     .about {
         position: relative;
         height: 7 * $bh;
+        @media screen and (max-width: 900px) {
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 0;
+            .about-canada-map {
+                position: relative;
+                align-self: center;
+            }
+        }
 
         .about-text {
             width: 2.5 * $bw;
+            @media screen and (max-width: 900px) {
+                width: 100%; 
+            }
         }
         .about-canada-map {
-            width: 4 * $bw;
-            position: absolute;
-            bottom: -$bh;
-            right: -1.75 * $bw;
-            z-index: 1;
+            width: 90%;
+            height: auto;
+            @media screen and (min-width: 900px) {
+                width: 4 * $bw;
+                position: absolute;
+                bottom: -$bh;
+                right: -1.75 * $bw;
+                z-index: 1;
+            }
         }
     }
     .band-container {
@@ -32,6 +49,9 @@ $bvw: 5 * $bw;
         overflow: hidden;
         position: relative;
         top: - 2 * $bh;
+        @media screen and (max-width: 900px) {
+            display: none;
+        }
         .band-area {
             div {
                 box-sizing: border-box;
@@ -266,6 +286,9 @@ $bvw: 5 * $bw;
         position: absolute;
         bottom: $bh;
         pointer-events: none;
+        @media screen and (max-width: 900px) {
+            position: relative;
+        }
         .footer-image {
             width: 200%;
             z-index: 5;
