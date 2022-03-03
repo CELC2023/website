@@ -34,6 +34,7 @@ $bvw: 5 * $bw;
         .about-canada-map {
             width: 90%;
             height: auto;
+            aspect-ratio: auto;
             @media screen and (min-width: 900px) {
                 width: 4 * $bw;
                 position: absolute;
