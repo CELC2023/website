@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import './History.scss';
 import HistoryCard from './HistoryCard';
+import Slider from 'react-slick';
+import Arrow, { ArrowDirections } from './Arrow';
 
 const History: React.FC = () => {
 
     const {t} = useTranslation();
-
 
     const historyList = [
         {
@@ -47,19 +48,52 @@ const History: React.FC = () => {
         },
     ]
 
+    const NextArrow = (props) => {
+        return (<Arrow direction={ArrowDirections.Right} />)
+    }
+
+    const PrevArrow = (props) => {
+        return (<Arrow direction={ArrowDirections.Left} />)
+    }
+
+    const settings = {
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1
+                } 
+            }, {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 2
+                } 
+            }, {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3
+                } 
+            }
+        ]
+    }
+
     return (
         <section className="history" id="history">
             <div className="title padded-section">
                 <h2 className='all-caps'><Trans i18nKey={'history-title'}></Trans></h2>
             </div>
-            <div className="content-container">
-                <div className="content">
+            <div className="content">
+                <Slider {...settings} >
                     {
                         historyList.map((h) => {
                             return <HistoryCard backgroundClass={h.backgroundClass} content={h.content} key={h.title+h.year.toFixed(0)} title={h.title} year={h.year} />
                         })
                     }
-                </div>
+                </Slider>
             </div>
         </section>
     )

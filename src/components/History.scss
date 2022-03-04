@@ -21,19 +21,17 @@
             }
         }
     }
-    .content-container {
-        width: 100%;
-        overflow: auto;
-        height: fit-content;
-        padding-bottom: 3%;
-        .content {
-            display: flex;
-            flex-direction: row;
-            width: max-content;
-            @media screen and (max-width: 700px){
-                flex-direction: column;
-                width: 100%;
-                align-items: center;
+    .content {
+        .slick-slider {
+            padding-bottom: 1em;
+            .slick-arrow {
+                z-index: 5;
+                &.slick-prev {
+                    left: 6px;
+                }
+                &.slick-next {
+                    right: 6px;
+                }
             }
         }
     }

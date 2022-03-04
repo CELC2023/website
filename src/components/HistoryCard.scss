@@ -1,12 +1,11 @@
 @import "../styles/colors.scss";
 
 .card {
-    height: 50vw;
-    width: 25vw;
+    height: 50vh;
     display: flex;
     flex-direction: column-reverse;
     border-radius: 3em;
-    margin: 5px 0.4em;
+    margin: 5px 8px;
     padding: 1em 2em;
     color: $white-primary;
     align-items: flex-end;
