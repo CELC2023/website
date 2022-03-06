@@ -24,7 +24,7 @@ const TopArea: React.FC = () => {
 
     const images = [
         {
-            url: '/v1641688217/celc2023-static/header-banner.png',
+            url: '/v1646548113/celc2023-static/elliston-park.png',
             location: t('title-image-elliston')
         }, {
             url:'/v1641965733/celc2023-static/jasper-national-park.png',
