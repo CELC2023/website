@@ -18,8 +18,9 @@ $bvw: 5 * $bw;
             height: auto;
             display: flex;
             flex-direction: column;
-            padding-bottom: 0;
+            padding-bottom: 3 * $bh;
             .about-canada-map {
+                margin-top: $bh;
                 position: relative;
                 align-self: center;
             }
