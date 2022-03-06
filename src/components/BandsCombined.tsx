@@ -22,17 +22,17 @@ const BandsCombined: React.FC = () => {
             {t("about-visit")}
           </a>
         </div>
-          <img className="about-canada-map" src="https://res.cloudinary.com/celc/image/upload/c_scale,q_auto:good,w_1920/v1646103351/celc2023-static/canada-map_t0ufpm.png" />
+          <img className="about-canada-map" src="https://res.cloudinary.com/celc/image/upload/c_scale,q_auto:good,w_1920/v1646545009/celc2023-static/canada-map_t0ufpm_c3vr5p.png" />
         </div>
         <div className="body band-container">
           <div
             className={`band-area ${bandView === "" ? "" : `${bandView}-view`}`}
           >
-            <h2 className="title-black bands-title">{t("bands-title")}</h2>
+            <h2 className="title-black bands-title">{bandView === "" ? t("bands-title") : ""}</h2>
             <div className="band" id="sustainability-outer">
               <div
                 id="sustainability-band"
-                className={`all-caps ${bandView === '' ? '' : 'hidden'}`}
+                className={`all-caps band-text-container ${bandView === '' ? '' : 'hidden'}`}
                 onClick={() => setBandView("sustainability")}
               >
                 {t("bands-sustinability")}
@@ -63,7 +63,7 @@ const BandsCombined: React.FC = () => {
               </div>
             </div>
             <div className="band" id="technology-outer">
-              <div id="technology-band" className={`all-caps ${bandView === '' ? '' : 'hidden'}`} onClick={() => setBandView("technology")}>
+              <div id="technology-band" className={`all-caps band-text-container ${bandView === '' ? '' : 'hidden'}`} onClick={() => setBandView("technology")}>
                 {t("bands-tech")}
                 <img src={UpArrow} className={`band-expand-arrow arrow-right ${bandView === '' ? '' : 'hidden'}`} />
               </div>
@@ -93,10 +93,10 @@ const BandsCombined: React.FC = () => {
             </div>
             <div className="band" id="diversity-container">
               <div id="diversity-bottom-left" />
-              <p id="diversity-band" className={`all-caps ${bandView === '' ? '' : 'hidden'}`} onClick={() => setBandView("diversity")}>
+              <div id="diversity-band" className={`all-caps band-text-container ${bandView === '' ? '' : 'hidden'}`} onClick={() => setBandView("diversity")}>
               <img src={UpArrow} className={`band-expand-arrow arrow-left ${bandView === '' ? '' : 'hidden'}`} />
                 {t("bands-diversity")}
-              </p>
+              </div>
               <div id="diversity-bottom-right" />
               <div id="diversity-top-right" />
               <div id="diversity-top" />

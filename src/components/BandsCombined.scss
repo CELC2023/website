@@ -10,10 +10,10 @@ $bvw: 5 * $bw;
 
 .bands {
     position: relative;
-    margin-bottom: -$bh;
+    margin-bottom: -2.8 *$bh;
     .about {
         position: relative;
-        height: 7 * $bh;
+        height: 9 * $bh;
         @media screen and (max-width: 900px) {
             height: auto;
             display: flex;
@@ -26,30 +26,31 @@ $bvw: 5 * $bw;
         }
 
         .about-text {
-            width: 2.5 * $bw;
+            width: 45vw;
             @media screen and (max-width: 900px) {
                 width: 100%; 
             }
         }
         .about-canada-map {
-            width: 90%;
+            width: auto;
             height: auto;
-            aspect-ratio: auto;
+            max-width: 90%;
             @media screen and (min-width: 900px) {
-                width: 4 * $bw;
+                max-width: 85vw;
                 position: absolute;
-                bottom: -$bh;
-                right: -1.75 * $bw;
+                top: 0;
+                right: -25vh;
                 z-index: 1;
+                max-height: 50vh;
             }
         }
     }
     .band-container {
-        height: 9 * $bh;
+        height: 11 * $bh;
         width: $bvw;
         overflow: hidden;
         position: relative;
-        top: - 2 * $bh;
+        top: -3 * $bh;
         @media screen and (max-width: 900px) {
             display: none;
         }
@@ -77,10 +78,11 @@ $bvw: 5 * $bw;
     
             .bands-title {
                 position: absolute;
-                top: 6 * $bh;
+                top: 4.5 * $bh;
                 left: 0.5 * $bw;
                 max-width: 3 * $bw;
                 line-height: 1;
+                font-size: 4.5rem;
             }
     
             .band {
@@ -121,6 +123,11 @@ $bvw: 5 * $bw;
                         transform: rotate(-90deg);
                     }
                 }
+                .band-text-container {
+                    display: flex;
+                    align-items: center;
+                    height: $bu;
+                }
             }
     
             #diversity-container {
@@ -136,7 +143,7 @@ $bvw: 5 * $bw;
                 border-top: $bu solid $yellow-primary;
                 position: absolute;
                 top: 4 * $bh;
-                height: 8 * $bh;
+                height: 9 * $bh;
                 border-radius: 6 * $bu 0 0 0;
                 width: $bw;
             }
@@ -204,7 +211,7 @@ $bvw: 5 * $bw;
             #sustainability-outer {
                 border-top: $bu solid $red-primary;
                 border-left: $bu solid $red-primary;
-                height: 10 * $bh;
+                height: 11 * $bh;
                 position: absolute;
                 width: 8.5 * $bw;
                 left: $bw;
@@ -285,7 +292,7 @@ $bvw: 5 * $bw;
         display: flex;
         overflow-x: hidden;
         position: absolute;
-        bottom: $bh;
+        bottom: 2.75*$bh;
         pointer-events: none;
         @media screen and (max-width: 900px) {
             position: relative;

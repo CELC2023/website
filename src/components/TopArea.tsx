@@ -11,7 +11,6 @@ const TopArea: React.FC = () => {
     const window = useWindowSize();
 
     const transform = () => {
-        console.log(window.width)
         if(window.width >= 2700) {
             return '/';
         } else if(window.width >= 1440) {
