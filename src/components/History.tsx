@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import './History.scss';
 import HistoryCard from './HistoryCard';
@@ -48,35 +48,32 @@ const History: React.FC = () => {
         },
     ]
 
-    const NextArrow = (props) => {
-        return (<Arrow direction={ArrowDirections.Right} />)
-    }
-
-    const PrevArrow = (props) => {
-        return (<Arrow direction={ArrowDirections.Left} />)
-    }
-
     const settings = {
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 6 ,
         slidesToScroll: 1,
         responsive: [
             {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1
-                } 
-            }, {
-                breakpoint: 1000,
+                breakpoint: 700,
                 settings: {
                     slidesToShow: 2
                 } 
             }, {
-                breakpoint: 1200,
+                breakpoint: 850,
+                settings: {
+                    slidesToShow: 2
+                } 
+            }, {
+                breakpoint: 1080,
                 settings: {
                     slidesToShow: 3
                 } 
+            }, {
+                breakpoint: 1750,
+                settings: {
+                    slidesToShow: 4
+                }
             }
         ]
     }

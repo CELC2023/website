@@ -27,10 +27,10 @@
             .slick-arrow {
                 z-index: 5;
                 &.slick-prev {
-                    left: 6px;
+                    left: 1em;
                 }
                 &.slick-next {
-                    right: 6px;
+                    right: 1em;
                 }
             }
         }
