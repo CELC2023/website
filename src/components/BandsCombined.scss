@@ -13,7 +13,8 @@ $bvw: 5 * $bw;
     margin-bottom: -2.8 *$bh;
     .about {
         position: relative;
-        height: 9 * $bh;
+        height: 7.5 * $bh;
+        display: flex;
         @media screen and (max-width: 900px) {
             height: auto;
             display: flex;
@@ -35,14 +36,13 @@ $bvw: 5 * $bw;
         .about-canada-map {
             width: auto;
             height: auto;
-            max-width: 90%;
+            max-width: 80vw;
             @media screen and (min-width: 900px) {
                 max-width: 85vw;
-                position: absolute;
-                top: 0;
-                right: -25vh;
                 z-index: 1;
-                max-height: 50vh;
+                margin-left: auto;
+                margin-right: -14em;
+                max-height: $bvh;
             }
         }
     }

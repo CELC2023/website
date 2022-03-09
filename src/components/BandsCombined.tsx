@@ -33,7 +33,7 @@ const BandsCombined: React.FC = () => {
               <div
                 id="sustainability-band"
                 className={`all-caps band-text-container ${bandView === '' ? '' : 'hidden'}`}
-                onClick={() => setBandView("sustainability")}
+                onClick={() => bandView == '' && setBandView("sustainability")}
               >
                 {t("bands-sustinability")}
                 <img src={UpArrow} className={`band-expand-arrow arrow-right ${bandView === '' ? '' : 'hidden'}`}/>
@@ -63,7 +63,7 @@ const BandsCombined: React.FC = () => {
               </div>
             </div>
             <div className="band" id="technology-outer">
-              <div id="technology-band" className={`all-caps band-text-container ${bandView === '' ? '' : 'hidden'}`} onClick={() => setBandView("technology")}>
+              <div id="technology-band" className={`all-caps band-text-container ${bandView === '' ? '' : 'hidden'}`} onClick={() => bandView == '' && setBandView("technology")}>
                 {t("bands-tech")}
                 <img src={UpArrow} className={`band-expand-arrow arrow-right ${bandView === '' ? '' : 'hidden'}`} />
               </div>
@@ -93,7 +93,7 @@ const BandsCombined: React.FC = () => {
             </div>
             <div className="band" id="diversity-container">
               <div id="diversity-bottom-left" />
-              <div id="diversity-band" className={`all-caps band-text-container ${bandView === '' ? '' : 'hidden'}`} onClick={() => setBandView("diversity")}>
+              <div id="diversity-band" className={`all-caps band-text-container ${bandView === '' ? '' : 'hidden'}`} onClick={() => bandView == '' && setBandView("diversity")}>
               <img src={UpArrow} className={`band-expand-arrow arrow-left ${bandView === '' ? '' : 'hidden'}`} />
                 {t("bands-diversity")}
               </div>
