@@ -55,9 +55,9 @@ const History: React.FC = () => {
         slidesToScroll: 1,
         responsive: [
             {
-                breakpoint: 700,
+                breakpoint: 600,
                 settings: {
-                    slidesToShow: 2
+                    slidesToShow: 1
                 } 
             }, {
                 breakpoint: 850,
