@@ -60,27 +60,49 @@
             gap: 2em;
         }
 
-        a {
-            text-decoration: none;
-            color: $black-primary;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            @media screen and (max-width: 800px) {
-                font-size: 1.5rem;
+
+        .navbar-link, .navbar-lang {
+            a {
+                text-decoration: none;
+                color: $black-primary;
+                font-weight: 700;
+                letter-spacing: 0.05em;
+                padding: 0 0.2em;
+                @media screen and (max-width: 800px) {
+                    font-size: 1.5rem;
+                }
+    
+                &:hover {
+                    background-color: $blue-primary;
+                    color: $white-primary;
+                }
             }
         }
+        
         .logo-link {
             height: fit-content;
+            &:hover {
+                background-color: none;
+            }
             img {
                 height: 85px;
                 padding: 0 10px 10px 10px;
                 transform: scale(1.4) translateY(2px);
+                &:hover {
+                    transform: scale(1.5) translateY(2px);
+                }
                 
             }
         }
-        .language-toggle {
-            text-decoration: underline;
-            font-weight: 400;
+        .navbar-lang {
+            a {
+                text-decoration: underline;
+                font-weight: 400;
+                padding: 0 0.2em;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
         }
     }
 }
