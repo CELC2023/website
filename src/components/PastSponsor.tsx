@@ -6,25 +6,28 @@ import Verafin from '../images/verafin.png';
 import Kraken from '../images/kraken.png';
 import Pomerleau from '../images/Pomerleau-logo.png';
 import { useTranslation } from 'react-i18next';
+import Fade from 'react-reveal/Fade';
 
 
 const PastSponsor: React.FC = () => {
     const {t} = useTranslation();
 
     return (
-        <section className="past-sponsor padded-section">
-            <h2 className="title-blue">{t('sponsor-past')}</h2>
-            <div>
-                <div className="past-sponsor-list">
-                    <img src={Solace}/>
-                    <img src={Colab}/>
-                    <img src={Verafin}/>
-                    <img src={Kraken}/>
-                    <img src={Pomerleau}/>
+        <Fade bottom>
+            <section className="past-sponsor padded-section">
+                <h2 className="title-blue">{t('sponsor-past')}</h2>
+                <div>
+                    <div className="past-sponsor-list">
+                        <img src={Solace}/>
+                        <img src={Colab}/>
+                        <img src={Verafin}/>
+                        <img src={Kraken}/>
+                        <img src={Pomerleau}/>
+                    </div>
+                    <p className="more-sponsors">{t('sponsor-more')}</p>
                 </div>
-                <p className="more-sponsors">{t('sponsor-more')}</p>
-            </div>
-        </section>
+            </section>
+        </Fade>
     )
 }
 

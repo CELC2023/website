@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './Faq.scss';
 import FaqItem, { faq } from './FaqItem';
+import Fade from "react-reveal/Fade";
 
 const FAQ: React.FC = () => {
     const {t} = useTranslation();
@@ -30,16 +31,18 @@ const FAQ: React.FC = () => {
 
     return (
         <section className="faq padded-section" id="faq">
-            <h2 className="title-blue">FAQ</h2>
-            <div className="faq-body">
-                <div className="faq-container">
-                    {
-                        questions.map((q: faq) => (
-                            <FaqItem faq={q} key={q.question} />
-                        ))
-                    }
+            <Fade bottom>
+                <h2 className="title-blue">FAQ</h2>
+                <div className="faq-body">
+                    <div className="faq-container">
+                        {
+                            questions.map((q: faq) => (
+                                <FaqItem faq={q} key={q.question} />
+                            ))
+                        }
+                    </div>
                 </div>
-            </div>
+            </Fade>
         </section>
     )
 }

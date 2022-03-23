@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react"
-import { Trans, useTranslation } from "react-i18next"
-import "./BandsCombined.scss"
-import BandArrow from "../images/icons/band-arrow.svg"
-import UpArrow from "../images/icons/up-arrow.svg"
-import FooterImage from "../images/bands-bottom.svg"
+import React, { useEffect, useState } from "react";
+import { Trans, useTranslation } from "react-i18next";
+import "./BandsCombined.scss";
+import BandArrow from "../images/icons/band-arrow.svg";
+import UpArrow from "../images/icons/up-arrow.svg";
+import FooterImage from "../images/bands-bottom.svg";
+import Fade from "react-reveal/Fade";
 
 const BandsCombined: React.FC = () => {
   const { t } = useTranslation()
@@ -13,8 +14,9 @@ const BandsCombined: React.FC = () => {
     <>
       <section className="bands">
       <div className="content padded-section about" id="about">
+      <Fade bottom>
         <div className="about-text">
-        <h2 className="title-blue">{t("about-title")}</h2>
+          <h2 className="title-blue">{t("about-title")}</h2>
           <p className="text-grey">
             <Trans i18nKey={"about-description"}></Trans>
           </p>
@@ -22,13 +24,16 @@ const BandsCombined: React.FC = () => {
             {t("about-visit")}
           </a>
         </div>
+        </Fade>
           <img className="about-canada-map" src="https://res.cloudinary.com/celc/image/upload/c_scale,q_auto:good,w_1920/v1646545009/celc2023-static/canada-map_t0ufpm_c3vr5p.png" />
         </div>
         <div className="body band-container">
           <div
             className={`band-area ${bandView === "" ? "" : `${bandView}-view`}`}
           >
+            <Fade bottom>
             <h2 className="title-black bands-title">{bandView === "" ? t("bands-title") : ""}</h2>
+            </Fade>
             <div className="band" id="sustainability-outer">
               <div
                 id="sustainability-band"
@@ -126,9 +131,9 @@ const BandsCombined: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="footer">
-          <img className={`footer-image ${bandView === 'sustainability' ? 'right-view': ''}`} src={FooterImage} />
-        </div>
+          <div className="footer">
+            <img className={`footer-image ${bandView === 'sustainability' ? 'right-view': ''}`} src={FooterImage} />
+          </div>
       </section>
     </>
   )
