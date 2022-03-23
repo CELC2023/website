@@ -2,10 +2,21 @@
 
 .faq {
     .faq-body {
+        @media screen and (min-width: 900px){
+            display: flex;
+            .faq-container {
+                width: 70%;
+            }
+        }
+        display: flex;
         .faq-container {
+            @media screen and (max-width: 900px) {
+                width: 100%;
+            }
             border-bottom: 1px solid $grey-secondary;
             .faq-item {
                 border-top: 1px solid $grey-secondary;
+                cursor: pointer;
                 .faq-header {
                     font-weight: 700;
                     margin: 0 0 1.5em 0;
@@ -15,12 +26,52 @@
                 }
                 .faq-text {
                     font-weight: 300;
+                    cursor: text;
                 }
                 .faq-control {
                     text-align: end;
                     font-size: 2.5em;
                     font-weight: 300;
                     margin: 0.25em 0 0 0;
+                }
+            }
+        }
+        .faq-image-container {
+            @media screen and (max-width: 900px){
+                display: none;
+            }
+            display: flex;
+            flex-direction: column;
+            margin-left: 3em;
+            width: 30%;
+            gap: 1em;
+            justify-content: center;
+            .top-row {
+                display: flex;
+                height: fit-content;
+                width: 100%;
+                gap: 1em;
+                align-items: flex-end;
+                .top-left {
+                    height: fit-content;
+                    width: 60%;
+                    border-radius: 35% 35% 0 35%;
+                }
+                .top-right {
+                    height: fit-content;
+                    width: 40%;
+                    border-radius: 25% 25% 25% 0;
+                }
+            }
+            .bottom-row {
+                display: flex;
+                height: fit-content;
+                width: 100%;
+                gap: 1em;
+                .bottom-left {
+                    width: 40%;
+                    border-radius:  0 0 50% 50%;
+                    margin-left: 20%;
                 }
             }
         }

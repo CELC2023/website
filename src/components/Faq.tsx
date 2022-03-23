@@ -41,6 +41,15 @@ const FAQ: React.FC = () => {
                             ))
                         }
                     </div>
+                    <div className='faq-image-container'>
+                        <div className='top-row'>
+                            <img className='top-left' src={`https://res.cloudinary.com/celc/image/upload/v1648062494/celc2023-static/47200189372_e59d672810_o_1_vzwrk2.png`} />
+                            <img className='top-right' src={`https://res.cloudinary.com/celc/image/upload/v1648062493/celc2023-static/39437270551_88ff2b7d71_k_1_quth3e.png`} />
+                        </div>
+                        <div className='bottom-row'>
+                            <img className='bottom-left' src={`https://res.cloudinary.com/celc/image/upload/v1648062492/celc2023-static/49697560688_f3a071fb2b_o_1_qlyfqi.png`} />
+                        </div>
+                    </div>
                 </div>
             </Fade>
         </section>
