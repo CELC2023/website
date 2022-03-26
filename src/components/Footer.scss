@@ -22,5 +22,16 @@
 
             }
         }
+
+        .footer-link {
+            &:link, &:visited, &:active {
+                color: $white-primary;
+                text-decoration: none;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }

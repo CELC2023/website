@@ -17,7 +17,7 @@ const BandsCombined: React.FC = () => {
       <Fade bottom>
         <div className="about-text">
           <h2 className="title-blue">{t("about-title")}</h2>
-          <p className="text-grey">
+          <p className="text-grey about-description-text">
             <Trans i18nKey={"about-description"}></Trans>
           </p>
           <a className="button-outlined-grey" href="https://cfes.ca/">
@@ -47,17 +47,8 @@ const BandsCombined: React.FC = () => {
                 <h2 className="all-caps band-content-header">
                   {t("bands-sustinability")}
                 </h2>
-                <p>
-                  The Canadian Engineering Leadership Conference (CELC) is an
-                  annual, bilingual, student-run conference that attracts over
-                  200 student leaders from 46 universities across the country.
-                  The Canadian Engineering Leadership Conference (CELC) is an
-                  annual, bilingual, student-run conference that attracts over
-                  200 student leaders from 46 universities across the country.
-                  The Canadian Engineering Leadership Conference (CELC) is an
-                  annual, bilingual, student-run conference that attracts over
-                  200 student leaders from 46 universities across the country.{" "}
-                </p>
+                <p className="text-top"><Trans i18nKey={`bands-text-sustinability-top`} /></p>
+                <p><Trans i18nKey={`bands-text-sustinability-bottom`} /></p>
                 <img
                   src={BandArrow}
                   className="control control-left"
@@ -76,17 +67,8 @@ const BandsCombined: React.FC = () => {
                 <h2 className="all-caps band-content-header">
                   {t("bands-tech")}
                 </h2>
-                <p>
-                  The Canadian Engineering Leadership Conference (CELC) is an
-                  annual, bilingual, student-run conference that attracts over
-                  200 student leaders from 46 universities across the country.
-                  The Canadian Engineering Leadership Conference (CELC) is an
-                  annual, bilingual, student-run conference that attracts over
-                  200 student leaders from 46 universities across the country.
-                  The Canadian Engineering Leadership Conference (CELC) is an
-                  annual, bilingual, student-run conference that attracts over
-                  200 student leaders from 46 universities across the country.{" "}
-                </p>
+                <p><Trans i18nKey={`bands-text-tech-top`}></Trans></p>
+                <p><Trans i18nKey={`bands-text-tech-bottom`}></Trans></p>
                 <img
                   src={BandArrow}
                   className="control control-down"
@@ -109,17 +91,8 @@ const BandsCombined: React.FC = () => {
                 <h2 className="all-caps band-content-header">
                   {t("bands-diversity")}
                 </h2>
-                <p>
-                  The Canadian Engineering Leadership Conference (CELC) is an
-                  annual, bilingual, student-run conference that attracts over
-                  200 student leaders from 46 universities across the country.
-                  The Canadian Engineering Leadership Conference (CELC) is an
-                  annual, bilingual, student-run conference that attracts over
-                  200 student leaders from 46 universities across the country.
-                  The Canadian Engineering Leadership Conference (CELC) is an
-                  annual, bilingual, student-run conference that attracts over
-                  200 student leaders from 46 universities across the country.{" "}
-                </p>
+                <p><Trans i18nKey={`bands-text-diversity-top`}></Trans></p>
+                <p><Trans i18nKey={`bands-text-diversity-bottom`}></Trans></p>
                 <img
                   src={BandArrow}
                   className="control control-up"

@@ -6,6 +6,9 @@
     text-decoration: none;
     width: max-content;
     height: fit-content;
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 .button {

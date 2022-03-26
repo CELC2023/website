@@ -32,6 +32,9 @@ $bvw: 5 * $bw;
             @media screen and (max-width: 900px) {
                 width: 100%; 
             }
+            .about-description-text {
+                padding-bottom: 1em;
+            }
         }
         .about-canada-map {
             width: auto;
@@ -259,7 +262,7 @@ $bvw: 5 * $bw;
                     left: 4 * $bw;
                     width: 4 * $bw;
                     top: -1.25 * $bh;
-                    >p {
+                    >.text-top {
                         margin-top: 1.5 * $bu;
                     }
                 }

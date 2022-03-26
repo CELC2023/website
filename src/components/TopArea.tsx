@@ -1,3 +1,5 @@
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import { useI18next } from 'gatsby-plugin-react-i18next';
 import React, { useEffect, useRef, useState } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 import useWindowSize from '../hooks/useWindowSize';
@@ -5,6 +7,7 @@ import './TopArea.scss'
 
 const TopArea: React.FC = () => {
     const {t} = useTranslation();
+    const {language} = useI18next();
 
     const imageBase = 'https://res.cloudinary.com/celc/image/upload';
 
@@ -44,6 +47,14 @@ const TopArea: React.FC = () => {
         }
     ]
 
+    const localizedPrefix = (link: string) => {
+        if(language === 'en') {
+          return link;
+        } else {
+          return `/${language}${link}`
+        }
+      }
+
     const [imageIndex, setImageIndex] = useState<number>(0);
     const timeout = useRef(null);
     const delay = 10000;
@@ -79,7 +90,8 @@ const TopArea: React.FC = () => {
                 <p className='card-body'>{t('title-description')}</p>
                 <div className="card-actions">
                     <a className="button-solid-red" href='mailto:chairs.future@celc.cfes.ca' target='_blank'>{t('title-partner')}</a>
-                    <a className="button-outlined-grey">{t('title-learn')}</a>
+                    <AnchorLink className="button-outlined-grey" to={localizedPrefix('/#about')} stripHash title={t('title-learn')} />
+                    {/* <a className="button-outlined-grey" href=''>{t('title-learn')}</a> */}
                 </div>
                 <div className="card-details">
                     <p className="location descriptor">{t('title-downtown')}</p>

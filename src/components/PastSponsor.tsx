@@ -3,7 +3,6 @@ import './PastSponsor.scss';
 import Solace from '../images/solace.png';
 import Colab from '../images/colab.png';
 import Verafin from '../images/verafin.png';
-import Kraken from '../images/kraken.png';
 import Pomerleau from '../images/Pomerleau-logo.png';
 import { useTranslation } from 'react-i18next';
 import Fade from 'react-reveal/Fade';
@@ -21,7 +20,6 @@ const PastSponsor: React.FC = () => {
                         <img src={Solace}/>
                         <img src={Colab}/>
                         <img src={Verafin}/>
-                        <img src={Kraken}/>
                         <img src={Pomerleau}/>
                     </div>
                     <p className="more-sponsors">{t('sponsor-more')}</p>

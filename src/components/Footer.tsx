@@ -10,9 +10,9 @@ const Footer: React.FC = () => {
       <div className="text">
         <span className="footer-text-primary">{t('footer-land')}</span>
         <span className="divider">|</span>
-        <span className="footer-text-secondary">{t('footer-ucalgary')}</span>
+        <a className="footer-text-secondary footer-link" href="https://ucalgary.ca">{t('footer-ucalgary')}</a>
         <span className="divider">|</span>
-        <span className="footer-text-secondary">{t('footer-cfes')}</span>
+        <a className="footer-text-secondary footer-link" href="https://cfes.ca">{t('footer-cfes')}</a>
       </div>
     </footer>
   )
