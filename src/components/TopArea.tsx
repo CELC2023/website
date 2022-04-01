@@ -72,7 +72,12 @@ const TopArea: React.FC = () => {
         
         <section className="top-area" id="top">
             <div className='title-image-container' >
-                <div className='image-pane' style={{width: `${images.length * 100}vw`, transform: `translateX(-${imageIndex * 100}vw)`}}>
+                <div 
+                className='image-pane' 
+                style={{
+                    width: `${images.length * 100}vw`,
+                    transform: `translateX(-${imageIndex * 100}vw)`,
+                    transition: `${imageIndex !== 0 ? '1s ease-in-out' : ''}`}}>
                     {
                         images.map((e, i) => {
                             return (

@@ -1,13 +1,13 @@
 @import "../styles/colors.scss";
 
 .top-area {
-    height: 900px;
+    height: 100vh;
     display: flex;
     background-repeat: no-repeat;
     position: relative;
     .title-image-container {
         position: absolute;
-        height: 900px;
+        height: 100vh;
         overflow: hidden;
         width: 100%;
         .image-pane {
