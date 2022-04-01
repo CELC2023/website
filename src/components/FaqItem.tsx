@@ -9,7 +9,7 @@ export interface faqItemProps {
     faq: faq
 }
 
-const FaqItem: React.FC<faqItemProps> = ({faq}) => {
+const FaqItem: React.FC<faqItemProps> = ({ faq }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     function toggleOpen() {
@@ -18,8 +18,10 @@ const FaqItem: React.FC<faqItemProps> = ({faq}) => {
 
     return (
         <div className={`faq-item faq-${isOpen ? 'open' : 'closed'}`}>
-            <p className="faq-control no-select" onClick={toggleOpen}>{isOpen ? '-' : '+'}</p>
-            <p className="faq-header no-select" onClick={toggleOpen}>{faq.question}</p>
+            <div className="faq-top" onClick={toggleOpen}>
+                <p className="faq-header no-select" >{faq.question}</p>
+                <p className="faq-control no-select" >{isOpen ? '-' : '+'}</p>
+            </div>
             {
                 isOpen &&
                 <p className="faq-text">{faq.answer}</p>

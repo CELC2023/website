@@ -25,7 +25,7 @@ const FAQ: React.FC = () => {
             answer: t('faq-workshop-answer')
         }, {
             question: t('faq-organize-text'),
-            answer: t('faq-organize-answer')
+            answer: t('faq-organize-answer') 
         }
     ]
 
