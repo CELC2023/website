@@ -28,7 +28,7 @@ $bvh: 400px;
             }
             .band {
                 color: $white-primary;
-                font-weight: 600;
+                font-weight: 400;
                 pointer-events: none;
                 &.blue {
                     background-color: $blue-primary; 
@@ -54,7 +54,8 @@ $bvh: 400px;
                     &.arrow-left {
                         transform: rotate(-90deg);
                     }
-                 }
+
+                }
             }
     
             #diversity-container {
