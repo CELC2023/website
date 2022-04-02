@@ -3,17 +3,18 @@
 
 .title {
     &-black {
+        line-height: 95%;
         text-transform: uppercase;
         font-size: 3em;
         color: $black-primary;
     }
 
     &-blue {
+        line-height: 95%;
         text-transform: uppercase;
         font-size: 3em;
         color: $blue-primary;
     }
-
 }
 
 .text-grey {
