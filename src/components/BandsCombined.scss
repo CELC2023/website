@@ -91,7 +91,7 @@ $bvw: 5 * $bw;
     
             .band {
                 color: $white-primary;
-                font-weight: 600;
+                font-weight: 400;
                 pointer-events: none;
                 &.blue {
                     background-color: $blue-primary;   
@@ -126,11 +126,18 @@ $bvw: 5 * $bw;
                     &.arrow-left {
                         transform: rotate(-90deg);
                     }
+                    &:hover {
+                        opacity: 0.85;
+                    }
                 }
                 .band-text-container {
                     display: flex;
                     align-items: center;
                     height: $bu;
+                    > div:hover {
+                        cursor: pointer;
+                        opacity: 0.75;
+                    }
                 }
             }
     
@@ -282,6 +289,11 @@ $bvw: 5 * $bw;
                     }
                     &-down {
                         transform: rotate(180deg);
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                        opacity: 0.75;
                     }
                 }
                 .band-content-header {

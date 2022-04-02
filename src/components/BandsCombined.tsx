@@ -40,8 +40,10 @@ const BandsCombined: React.FC = () => {
                 className={`all-caps band-text-container ${bandView === '' ? '' : 'hidden'}`}
                 onClick={() => bandView == '' && setBandView("sustainability")}
               >
-                {t("bands-sustinability")}
-                <img src={UpArrow} className={`band-expand-arrow arrow-right ${bandView === '' ? '' : 'hidden'}`}/>
+                <div>
+                  {t("bands-sustinability")}
+                  <img src={UpArrow} className={`band-expand-arrow arrow-right ${bandView === '' ? '' : 'hidden'}`}/>
+                </div>
               </div>
               <div className={`content-area sustainability flex ${bandView === 'sustainability' ? '' : 'hidden'}`}>
                 <h2 className="all-caps band-content-header">
@@ -60,8 +62,10 @@ const BandsCombined: React.FC = () => {
             </div>
             <div className="band" id="technology-outer">
               <div id="technology-band" className={`all-caps band-text-container ${bandView === '' ? '' : 'hidden'}`} onClick={() => bandView == '' && setBandView("technology")}>
-                {t("bands-tech")}
-                <img src={UpArrow} className={`band-expand-arrow arrow-right ${bandView === '' ? '' : 'hidden'}`} />
+                <div>
+                  {t("bands-tech")}
+                  <img src={UpArrow} className={`band-expand-arrow arrow-right ${bandView === '' ? '' : 'hidden'}`} />
+                </div>
               </div>
               <div className={`content-area technology flex ${bandView === 'technology' ? '' : 'hidden'}`}>
                 <h2 className="all-caps band-content-header">
@@ -81,8 +85,10 @@ const BandsCombined: React.FC = () => {
             <div className="band" id="diversity-container">
               <div id="diversity-bottom-left" />
               <div id="diversity-band" className={`all-caps band-text-container ${bandView === '' ? '' : 'hidden'}`} onClick={() => bandView == '' && setBandView("diversity")}>
-              <img src={UpArrow} className={`band-expand-arrow arrow-left ${bandView === '' ? '' : 'hidden'}`} />
-                {t("bands-diversity")}
+                <div>
+                  <img src={UpArrow} className={`band-expand-arrow arrow-left ${bandView === '' ? '' : 'hidden'}`} />
+                  {t("bands-diversity")}
+                </div>
               </div>
               <div id="diversity-bottom-right" />
               <div id="diversity-top-right" />
