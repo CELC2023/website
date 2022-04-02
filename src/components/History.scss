@@ -28,9 +28,11 @@
                 z-index: 5;
                 &.slick-prev {
                     left: 1em;
+                    margin-left: 10px;
                 }
                 &.slick-next {
                     right: 1em;
+                    margin-right: 10px;
                 }
             }
         }
