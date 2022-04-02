@@ -6,38 +6,66 @@
     text-decoration: none;
     width: max-content;
     height: fit-content;
-    &:hover {
-        transform: scale(1.1);
-    }
+    // &:hover {
+    //     transform: scale(1.1);
+    // }
 }
 
 .button {
+
     &-solid {
         border: none;
+
         &-blue {
             background-color: $blue-primary;
         }
+
         &-grey {
             background-color: $grey-primary;
         }
+
         &-red {
             background-color: $red-primary;
             color: $white-primary;
+
+            &:hover {
+                background-color: $off-red-primary;
+            }
         }
     }
 
     &-outlined {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        
         &-blue {
             border: 2px solid $blue-primary;
             color: $blue-primary;
+
+            &:hover {
+                color: $white-primary;
+                background-color: $off-red-primary;
+            }
         }
+
         &-grey {
             border: 2px solid $grey-primary;
             color: $grey-primary;
+
+            &:hover {
+                color: $white-primary;
+                background-color: $grey-primary;
+            }
         }
+
         &-red {
             border: 2px solid $red-primary;
             color: $red-primary;
+
+            &:hover {
+                color: $white-primary;
+                background-color: $off-red-primary;
+            }
         }
     }
 }
