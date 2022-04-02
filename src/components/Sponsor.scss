@@ -36,6 +36,9 @@
             &:hover {
                 cursor: default;
             }
+            p:hover {
+                cursor: text;
+            }
         }
     }
     .package-info {
