@@ -10,6 +10,9 @@
         @media screen and (min-width: 1350px) {
             padding: 0 calc(((100vw - 630px)/2) - 150px);
         }
+        p {
+            margin-top: 0;
+        }
         .card {
             width: 200px;
             height: 200px;
