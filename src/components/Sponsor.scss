@@ -33,6 +33,9 @@
             .perk-icon {
                 height: 125px;
             }
+            &:hover {
+                cursor: default;
+            }
         }
     }
     .package-info {
