@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { ReactChild, useState } from "react";
 
 export interface faq {
     question: String,
-    answer: String
+    answer?: String,
+    custom?: ReactChild,
 }
 
 export interface faqItemProps {
@@ -24,7 +25,7 @@ const FaqItem: React.FC<faqItemProps> = ({ faq }) => {
             </div>
             {
                 isOpen &&
-                <p className="faq-text">{faq.answer}</p>
+                <p className="faq-text">{faq.custom ? faq.custom : faq.answer}</p>
             }
         </div>
     )

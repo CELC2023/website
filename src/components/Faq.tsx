@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import './Faq.scss';
 import FaqItem, { faq } from './FaqItem';
 import Fade from "react-reveal/Fade";
@@ -10,22 +10,22 @@ const FAQ: React.FC = () => {
     const questions: faq[] = [
         {
             question: t('faq-looking-text'),
-            answer: t('faq-looking-answer')
+            custom: <Trans i18nKey={'faq-looking-answer'}>Yes! Reach out to us to start the discussion at <a href='mailto:sponsorship.future@celc.cfes.ca'>sponsorship.future@celc.cfes.ca</a>.</Trans>
         }, {
             question: t('faq-flex-text'),
             answer: t('faq-flex-answer')
         }, {
             question: t('faq-cfes-text'),
-            answer: t('faq-cfes-answer')
+            custom: <Trans i18nKey={'faq-cfes-answer'}>The Canadian Federation of Engineering Students is a bilingual organization that represents all 85,000 engineering students across Canada. Through advocacy, partnerships and hosting conferences (such as this one), the CFES continues to make an impact by improving engineering student lives. Learn more about the CFES by visiting their website at <a href='https://cfes.ca'>cfes.ca</a>.</Trans>
         }, {
             question: t('faq-attend-text'),
             answer: t('faq-attend-answer')
         }, {
             question: t('faq-workshop-text'),
-            answer: t('faq-workshop-answer')
+            custom: <Trans i18nKey={'faq-workshop-answer'}>CELC 2023 will include up to 40 sessions across 3 streams. This includes hands-on workshops, panels and even a case competition! If you are interested in getting involved, reach out to our programming team at <a href='mailto:chair.future@celc.cfes.ca'>chair.future@celc.cfes.ca</a>.</Trans>
         }, {
             question: t('faq-organize-text'),
-            answer: t('faq-organize-answer') 
+            custom: <Trans i18nKey={'faq-organize-answer'}>CELC 2023 is always accepting volunteers to help plan our conference. Whether that's on day-to-day operations or supporting our bilingual services. Reach out to us at <a href='mailto:chair.future@celc.cfes.ca'>chair.future@celc.cfes.ca</a>.</Trans>
         }
     ]
 
@@ -36,8 +36,8 @@ const FAQ: React.FC = () => {
                 <div className="faq-body">
                     <div className="faq-container">
                         {
-                            questions.map((q: faq) => (
-                                <FaqItem faq={q} key={q.question} />
+                            questions.map((q: faq, i: number) => (
+                                <FaqItem faq={q} key={i} />
                             ))
                         }
                     </div>
