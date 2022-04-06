@@ -1,20 +1,19 @@
 @import "../styles/colors.scss";
 
 .top-area {
-    height: 100vh;
+    height: 70vh;
     display: flex;
     background-repeat: no-repeat;
     position: relative;
     .title-image-container {
         position: absolute;
-        height: 100vh;
         overflow: hidden;
         width: 100%;
         .image-pane {
             display: inline-flex;
             .title-image-slide {
                 width: 100vw;
-                height: 900px;
+                height: 70vh;
                 background-size: cover;
             }
         }

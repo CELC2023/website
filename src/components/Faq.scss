@@ -14,7 +14,11 @@
             @media screen and (max-width: 900px) {
                 width: 100%;
             }
-            border-bottom: 1px solid $grey-secondary;
+            :last-child {
+                &.faq-item {
+                    border-bottom: 1px solid $grey-secondary;
+                }
+            }
             .faq-item {
                 border-top: 1px solid $grey-secondary;
                 .faq-top {
@@ -37,6 +41,9 @@
                     opacity: 0.75;
                     cursor: text;
                     margin-top: 0;
+                    a {
+                        color: $blue-primary;
+                    }
                 }
                 .faq-control {
                     text-align: end;
