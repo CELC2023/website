@@ -1,19 +1,26 @@
 @import "../styles/colors.scss";
 
 .top-area {
-    height: 70vh;
+    height: 100%;
+    min-height: 700px;
     display: flex;
     background-repeat: no-repeat;
     position: relative;
+    align-items: center;
+    @media screen and (min-width: 900px){
+        margin-top: 65px;
+    }
     .title-image-container {
         position: absolute;
         overflow: hidden;
         width: 100%;
+        height: 100%;
         .image-pane {
             display: inline-flex;
+            height: 100%;
             .title-image-slide {
                 width: 100vw;
-                height: 70vh;
+                height: 100%;
                 background-size: cover;
             }
         }
@@ -21,7 +28,6 @@
     }
     .information-card {
         background-color: $white-primary;
-        margin-top: 150px;
         min-height: 30%;
         height: fit-content;
         width: 500px;
