@@ -11,7 +11,12 @@
             padding: 0 calc(((100vw - 630px)/2) - 150px);
         }
         p {
-            margin-top: 0;
+            margin: 0;
+            margin-top: 1em;
+            font-weight: 700;
+            line-height: 145%;
+            letter-spacing: 0.02em;
+            font-size: 0.95em;
         }
         .card {
             width: 200px;
@@ -46,6 +51,10 @@
         justify-content: space-around;
         padding: 0 20%;
         align-items: center;
+        margin-top: 1.5em;
+        >p {
+            font-weight: 400;
+        }
         @media only screen and (max-width: 700px) {
             flex-direction: column;
             text-align: center;
