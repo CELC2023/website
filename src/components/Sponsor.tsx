@@ -8,42 +8,56 @@ import Handbook from '../images/icons/handbook.svg';
 import Tower from '../images/icons/tower.svg';
 import Banquet from '../images/icons/banquet.svg';
 import Fade from 'react-reveal/Fade';
+import { string } from 'prop-types';
 
 const Sponsor: React.FC = () => {
     const {t} = useTranslation();
+
+    interface SponsorCard {
+        textKey: string
+        image: any
+    }
+
+    const sponsorCards: Array<SponsorCard> = [
+        {
+            textKey: 'sponsor-career',
+            image: Booth
+        }, {
+            textKey: 'sponsor-delegate',
+            image: Resumes
+        }, {
+            textKey: 'sponsor-session',
+            image: Present
+        }, {
+            textKey: 'sponsor-handbook',
+            image: Handbook
+        }, {
+            textKey: 'sponsor-logo',
+            image: Tower
+        }, {
+            textKey: 'sponsor-banquet',
+            image: Banquet
+        }
+    ]
 
     return (
         <section className="sponsor padded-section" id="sponsor">
             <Fade bottom>
                 <div className="title">
-                    <h2 className="title-black">{t('sponsor-title')}</h2>
+                    <h2 className="title-blue">{t('sponsor-title')}</h2>
                 </div>
                 <div className="content">
                     <div className="perk-cards">
-                        <div className="card">
-                            <p>{t('sponsor-career')}</p>
-                            <img className="perk-icon" src={Booth} />
-                        </div>
-                        <div className="card">
-                            <p>{t('sponsor-delegate')}</p>
-                            <img className="perk-icon" src={Resumes} />
-                        </div>
-                        <div className="card">
-                            <p>{t('sponsor-session')}</p>
-                            <img className="perk-icon" src={Present} />
-                        </div>
-                        <div className="card">
-                            <p>{t('sponsor-handbook')}</p>
-                            <img className="perk-icon" src={Handbook} />
-                        </div>
-                        <div className="card">
-                            <p>{t('sponsor-logo')}</p>
-                            <img className="perk-icon" src={Tower} />
-                        </div>
-                        <div className="card">
-                            <p>{t('sponsor-banquet')}</p>
-                            <img className="perk-icon" src={Banquet} />
-                        </div>
+                        {
+                            sponsorCards.map((c, i) => {
+                                return (
+                                    <div className="card">
+                                        <img className="perk-icon" src={c.image} />
+                                        <p className='all-caps'>{t(c.textKey)}</p>
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
                     <div className="package-info">
                         <p>{t('sponsor-desc')}</p>
