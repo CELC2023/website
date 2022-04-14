@@ -3,7 +3,7 @@ require('dotenv').config();
 module.exports = {
   siteMetadata: {
     title: `CELC 2023`,
-    description: `Canadian Engineering Leadership Conference 2023 Website`,
+    description: `Canadian Engineering Leadership Conference 2023`,
     author: `CELC 2023 Organizing Committee`,
   },
   plugins: [
