@@ -1,7 +1,9 @@
 @import "../styles/colors.scss";
 
+$mobile-nav-breakpoint: 900px;
+
 .mobile-nav-toggle {
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: $mobile-nav-breakpoint) {
         display: block;
         background-color: $yellow-primary;
         border-radius: 50%;
@@ -16,6 +18,9 @@
             cursor: pointer;
             background-color: $off-yellow-primary; 
         }
+        >img {
+            vertical-align: middle;
+        }
     }
     display: none;
 }
@@ -26,7 +31,7 @@
     z-index: 20;
     top: 0;
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: $mobile-nav-breakpoint) {
         
         transform: translateX(100%);
         transition: transform 350ms ease-in;
@@ -43,7 +48,7 @@
         flex-direction: column;
         margin: 0;
         padding: 2em;
-        @media screen and (min-width: 800px) {
+        @media screen and (min-width: $mobile-nav-breakpoint) {
             height: 30px;
             padding: 20px 15px 15px 15px;
             flex-direction: row; 
@@ -59,7 +64,7 @@
             }     
         }
 
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: $mobile-nav-breakpoint) {
             gap: 2em;
         }
 
@@ -87,7 +92,7 @@
                     transform: scaleX(1);
                     transform-origin: bottom left;
                 }
-                @media screen and (max-width: 800px) {
+                @media screen and (max-width: $mobile-nav-breakpoint) {
                     font-size: 1.5rem;
                     &::after {
                         display: none;
