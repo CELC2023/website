@@ -58,7 +58,7 @@
          },
          {
            name: `og:site_name`,
-           content: `CELC - Hosted by University of Calgary`
+           content: `Hosted by University of Calgary`
          },
          {
            name: `og:locale`,
