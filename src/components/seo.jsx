@@ -53,8 +53,12 @@
            content: `website`,
          },
          {
+           property: `og:image`,
+           content: `https://res.cloudinary.com/celc/image/upload/v1650305541/celc2023-static/celc-social-preview_myzjpn.png`
+         },
+         {
            name: `twitter:card`,
-           content: `summary`,
+           content: `summary_large_image`,
          },
          {
            name: `twitter:creator`,
@@ -68,6 +72,10 @@
            name: `twitter:description`,
            content: metaDescription,
          },
+         {
+           name: `twitter:image`,
+           content: `https://res.cloudinary.com/celc/image/upload/v1650305541/celc2023-static/celc-social-preview_myzjpn.png`
+         }
        ].concat(meta)}
      />
    )
