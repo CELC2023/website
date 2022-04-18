@@ -26,7 +26,7 @@
    )
  
    const metaDescription = description || site.siteMetadata.description
-   const defaultTitle = site.siteMetadata?.title
+   const defaultTitle = `Diversity, Technology, and Sustainability`
  
    return (
      <Helmet
@@ -57,6 +57,18 @@
            content: `https://res.cloudinary.com/celc/image/upload/v1650305541/celc2023-static/celc-social-preview_myzjpn.png`
          },
          {
+           name: `og:site_name`,
+           content: `CELC - Hosted by University of Calgary`
+         },
+         {
+           name: `og:locale`,
+           content: `en_CA`
+         }, 
+         {
+           name: `og:locale:alternate`,
+           content: `fr_CA`
+         },
+         {
            name: `twitter:card`,
            content: `summary_large_image`,
          },
@@ -75,7 +87,7 @@
          {
            name: `twitter:image`,
            content: `https://res.cloudinary.com/celc/image/upload/v1650305541/celc2023-static/celc-social-preview_myzjpn.png`
-         }
+         }, 
        ].concat(meta)}
      />
    )
