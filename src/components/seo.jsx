@@ -26,7 +26,7 @@
    )
  
    const metaDescription = description || site.siteMetadata.description
-   const defaultTitle = `Diversity, Technology, and Sustainability`
+   const defaultTitle = `CELC 2023`
  
    return (
      <Helmet
