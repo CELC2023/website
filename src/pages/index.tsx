@@ -17,7 +17,7 @@ import "../styles/common.scss"
 
 const IndexPage: React.FC = () => (
   <Layout>
-    <Seo title="Homepage" />
+    <Seo title="Diversity, Technology, and Sustainability" />
     <TopArea />
     <BandsCombined />
     <History />
