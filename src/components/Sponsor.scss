@@ -1,5 +1,14 @@
 @import "../styles/colors.scss";
 
+@keyframes sponsor-card {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-0.25em);
+    }
+}
+
 .sponsor {
     .perk-cards {
         display: flex;
@@ -40,6 +49,9 @@
             }
             &:hover {
                 cursor: default;
+                animation-name: sponsor-card;
+                animation-duration: 0.5s;
+                transform: translateY(-0.25em);
             }
             p:hover {
                 cursor: text;
