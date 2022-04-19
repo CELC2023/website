@@ -87,7 +87,11 @@
          {
            name: `twitter:image`,
            content: `https://res.cloudinary.com/celc/image/upload/v1650305541/celc2023-static/celc-social-preview_myzjpn.png`
-         }, 
+         },
+         {
+           name: `google-site-verification`,
+           content: `LVmVDh4wfp108LWrDWqbtAAb1yafW-6VxYX3ZLVoX4k`
+         }
        ].concat(meta)}
      />
    )
