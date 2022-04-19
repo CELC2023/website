@@ -90,7 +90,7 @@
          },
          {
            name: `google-site-verification`,
-           content: `LVmVDh4wfp108LWrDWqbtAAb1yafW-6VxYX3ZLVoX4k`
+           content: `-Jcw_I7yntRqs-_NcflbCfOjfmPBwNvBkaQAigCkOuU`
          }
        ].concat(meta)}
      />
