@@ -7,12 +7,16 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
+        
         >img {
-            max-height: 4em;
-            max-width: 20%;
+            height: 100%;
+            width: 200px;
             padding: 10px 20px;
-            height: auto;
-            width: auto;
+
+            &.td-img {
+                width: 100px;
+            }
         }
     }
     .more-sponsors {
