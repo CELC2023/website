@@ -64,7 +64,7 @@ const BandsCombined: React.FC = () => {
               <div id="technology-band" className={`all-caps band-text-container ${bandView === '' ? '' : 'hidden'}`} onClick={() => bandView == '' && setBandView("technology")}>
                 <div>
                   {t("bands-tech")}
-                  <img src={UpArrow} className={`band-expand-arrow arrow-right ${bandView === '' ? '' : 'hidden'}`} />
+                  <img src={UpArrow} className={`band-expand-arrow ${bandView === '' ? '' : 'hidden'}`} />
                 </div>
               </div>
               <div className={`content-area technology flex ${bandView === 'technology' ? '' : 'hidden'}`}>
