@@ -171,6 +171,7 @@ $bvw: 5 * $bw;
                 background-color: $yellow-primary;
                 pointer-events: fill;
                 font-size: calc($bu - 1rem);
+                justify-content: center;
             }
     
             #diversity-bottom-right {
