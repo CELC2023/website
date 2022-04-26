@@ -17,13 +17,15 @@ import "../styles/common.scss"
 
 const IndexPage: React.FC = () => (
   <Layout>
-    <Seo title="Diversity, Technology, and Sustainability" />
-    <TopArea />
-    <BandsCombined />
-    <History />
-    <Sponsor />
-    <PastSponsor />
-    <FAQ />
+    <div className="page-content-container">
+      <Seo title="Diversity, Technology, and Sustainability" />
+      <TopArea />
+      <BandsCombined />
+      <History />
+      <Sponsor />
+      <PastSponsor />
+      <FAQ />
+    </div>
     <CommitteeListing />
   </Layout>
 )

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import "./BandsCombined.scss";
 import BandArrow from "../images/icons/band-arrow.svg";

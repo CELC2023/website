@@ -1,327 +1,338 @@
 @import "../styles/colors.scss";
 
-$bu: 2.5rem;
-
-$bw: 20vw;
-$bh: 80px;
-
-$bvh: 6 * $bh;
-$bvw: 5 * $bw;
-
-.bands {
-    position: relative;
-    margin-bottom: -2.8 *$bh;
-    .about {
+@mixin bands-styling($bw, $bvw) {
+    .bands {
         position: relative;
-        height: 7.5 * $bh;
-        display: flex;
-        @media screen and (max-width: 900px) {
-            height: auto;
-            display: flex;
-            flex-direction: column;
-            padding-bottom: 3 * $bh;
-            .about-canada-map {
-                margin-top: $bh;
-                position: relative;
-                align-self: center;
-            }
-        }
-
-        .about-text {
-            width: 45vw;
-            @media screen and (max-width: 900px) {
-                width: 100%; 
-            }
-            .about-description-text {
-                padding-bottom: 1em;
-            }
-        }
-        .about-canada-map {
-            width: auto;
-            height: auto;
-            max-width: 80vw;
-            @media screen and (min-width: 900px) {
-                max-width: 85vw;
-                z-index: 1;
-                margin-left: auto;
-                margin-right: -14em;
-                max-height: $bvh;
-            }
-        }
-    }
-    .band-container {
-        height: 11 * $bh;
-        width: $bvw;
-        overflow: hidden;
-        position: relative;
-        top: -3 * $bh;
-        @media screen and (max-width: 900px) {
-            display: none;
-        }
-        .band-area {
-            div {
-                box-sizing: border-box;
-            }
-            transform: translate(0, - 4.5 * $bh);
-            transition: 1s ease-in-out;
+        margin-bottom: -2.8 *$bh;
+        .about {
             position: relative;
-            width: 20 * $bw;
-            height: 20 * $bh;
-            &.diversity-view {
-                transform: translate(0, -8 * $bh);
-                transition: 1s ease-in-out;
-            }
-            &.sustainability-view {
-                transform: translate(-4.5 * $bw, -4 * $bh);
-                transition: 1s ease-in-out;
-            }
-            &.technology-view {
-                transform: translate(0, 0);
-                transition: 1s ease-in-out;
-            }
-    
-            .bands-title {
-                position: absolute;
-                top: 4.5 * $bh;
-                left: 0.5 * $bw;
-                max-width: 3 * $bw;
-                line-height: 1;
-                font-size: 4.5rem;
+            height: 7.5 * $bh;
+            display: flex;
+            @media screen and (max-width: 900px) {
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 3 * $bh;
+                .about-canada-map {
+                    margin-top: $bh;
+                    position: relative;
+                    align-self: center;
+                }
             }
     
-            .band {
-                color: $white-primary;
-                font-weight: 400;
-                pointer-events: none;
-                &.blue {
-                    background-color: $blue-primary;   
+            .about-text {
+                width: 45vw;
+                @media screen and (max-width: 900px) {
+                    width: 100%; 
                 }
-                &.red {
-                    background-color: $red-primary; 
+                .about-description-text {
+                    padding-bottom: 1em;
                 }
-                &.yellow {
-                    background-color: $yellow-primary; 
+            }
+            .about-canada-map {
+                width: auto;
+                height: auto;
+                max-width: 80vw;
+                @media screen and (min-width: 900px) {
+                    max-width: 85vw;
+                    z-index: 1;
+                    margin-left: auto;
+                    margin-right: -14em;
+                    max-height: $bvh;
                 }
-                .hidden {
-                    color: transparent;
-                    transition: 0.2s ease-out;
-                    
+            }
+        }
+        .band-container {
+            height: 11 * $bh;
+            width: $bvw;
+            overflow: hidden;
+            position: relative;
+            top: -3 * $bh;
+            @media screen and (max-width: 900px) {
+                display: none;
+            }
+            .band-area {
+                div {
+                    box-sizing: border-box;
                 }
-                .band-expand-arrow {
-                    border-radius: 50%;
-                    border: 2px solid $white-primary;
-                    padding: 5px;
-                    height: .75em;
-                    width: .75em;
-                    margin: 0 1em;
-                    vertical-align: middle;
-                    cursor: pointer;
+                transform: translate(0, - 4.5 * $bh);
+                transition: 1s ease-in-out;
+                position: relative;
+                width: 20 * $bw;
+                height: 20 * $bh;
+                &.diversity-view {
+                    transform: translate(0, -8 * $bh);
+                    transition: 1s ease-in-out;
+                }
+                &.sustainability-view {
+                    transform: translate(-4.5 * $bw, -4 * $bh);
+                    transition: 1s ease-in-out;
+                }
+                &.technology-view {
+                    transform: translate(0, 0);
+                    transition: 1s ease-in-out;
+                }
+        
+                .bands-title {
+                    position: absolute;
+                    top: 4.5 * $bh;
+                    left: 0.5 * $bw;
+                    max-width: 3 * $bw;
+                    line-height: 1;
+                    font-size: 4.5rem;
+                }
+        
+                .band {
+                    color: $white-primary;
+                    font-weight: 400;
+                    pointer-events: none;
+                    &.blue {
+                        background-color: $blue-primary;   
+                    }
+                    &.red {
+                        background-color: $red-primary; 
+                    }
+                    &.yellow {
+                        background-color: $yellow-primary; 
+                    }
+                    .hidden {
+                        color: transparent;
+                        transition: 0.2s ease-out;
+                        
+                    }
+                    .band-expand-arrow {
+                        border-radius: 50%;
+                        border: 2px solid $white-primary;
+                        padding: 5px;
+                        height: .75em;
+                        width: .75em;
+                        margin: 0 1em;
+                        vertical-align: middle;
+                        cursor: pointer;
+                        &.hidden {
+                            opacity: 0;
+                            transition: 0.2s ease-out;
+                        }
+                        &.arrow-right {
+                            transform: rotate(90deg);
+                        }
+                        &.arrow-left {
+                            transform: rotate(-90deg);
+                        }
+                        &:hover {
+                            opacity: 0.85;
+                        }
+                    }
+                    .band-text-container {
+                        display: flex;
+                        align-items: center;
+                        height: $bu;
+                        > div:hover {
+                            cursor: pointer;
+                            opacity: 0.75;
+                        }
+                    }
+                }
+        
+                #diversity-container {
+                    position: absolute;
+                    width: 9.5 * $bw;
+                    left: 0.5 * $bw;
+                    height: 9 * $bh;
+                    top: $bvh;
+                }
+        
+                #diversity-bottom-left {
+                    border-left: $bu solid $yellow-primary;
+                    border-top: $bu solid $yellow-primary;
+                    position: absolute;
+                    top: 4 * $bh;
+                    height: 9 * $bh;
+                    border-radius: 6 * $bu 0 0 0;
+                    width: $bw;
+                }
+        
+                #diversity-band {
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                    position: absolute;
+                    text-align: center;
+                    top: 4 * $bh;
+                    height: $bu;
+                    width: calc(2 * $bw + 4px);
+                    left: calc($bw - 2px);
+                    background-color: $yellow-primary;
+                    pointer-events: fill;
+                    font-size: calc($bu - 1rem);
+                    justify-content: center;
+                }
+        
+                #diversity-bottom-right {
+                    border-right: $bu solid $yellow-primary;
+                    border-bottom: $bu solid $yellow-primary;
+                    position: absolute;
+                    height: calc(1.5 * $bh + $bu + 2px);
+                    width: calc(0.75 * $bw + 2 * $bu);
+                    top: calc(2.5 * $bh - 2px);
+                    left: 3 * $bw;
+                    border-radius: 0 0 8 * $bu 0;
+                }
+        
+                #diversity-top-right {
+                    border-left: $bu solid $yellow-primary;
+                    border-top: $bu solid $yellow-primary;
+                    position: absolute;
+                    height: 2 * $bh;
+                    width: 5.5 * $bw;
+                    top: 0.5 * $bh;
+                    left: calc(3.75 * $bw + $bu);
+                    border-radius: 8 * $bu 0 0 0;
+                    box-sizing: border-box;
+                }
+        
+                #technology-outer {
+                    border-bottom: $bu solid $blue-primary;
+                    border-right: $bu solid $blue-primary;
+                    height: 9.5 * $bh;
+                    position: absolute;
+                    left: 0;
+                    width: 4.5 * $bw;
+                    border-radius: 0 0 6*$bu 0;
+                    top: 0;
+                    box-sizing: border-box;
+                }
+        
+                #technology-band {
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                    position: absolute;
+                    bottom: -$bu;
+                    left: 40%;
+                    text-align: center;
+                    pointer-events: fill;
+                    font-size: calc($bu - 1rem);
+                }
+        
+                #sustainability-outer {
+                    border-top: $bu solid $red-primary;
+                    border-left: $bu solid $red-primary;
+                    height: 11 * $bh;
+                    position: absolute;
+                    width: 8.5 * $bw;
+                    left: $bw;
+                    border-radius: 8*$bu 0 0 0;
+                    top: 8 * $bh;
+                }
+        
+                #sustainability-band {
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                    position: absolute;
+                    top: -$bu;
+                    left: 1.25 * $bw;
+                    pointer-events: fill;
+                    font-size: calc($bu - 1rem);
+                }
+        
+                .content-area {
+                    position: absolute;
+                    flex-direction: column;
+                    color: $off-black-primary;
+                    pointer-events: fill;
+                    opacity: 1;
+                    transition: 1.2s ease-in;
+                    >h2 {
+                        margin: 0;
+                    }
+                    >p {
+                        margin-top: 0;
+                    }
                     &.hidden {
                         opacity: 0;
                         transition: 0.2s ease-out;
                     }
-                    &.arrow-right {
-                        transform: rotate(90deg);
+                    &.diversity {
+                        left: $bw;
+                        width: 3 * $bw;
+                        align-items: flex-end;
+                        text-align: right;
+                        height: 400px;
+                        top: 5 * $bh;
                     }
-                    &.arrow-left {
-                        transform: rotate(-90deg);
+                    &.sustainability {
+                        left: 4 * $bw;
+                        width: 4 * $bw;
+                        top: -1.25 * $bh;
+                        >.text-top {
+                            margin-top: 1.5 * $bu;
+                        }
                     }
-                    &:hover {
-                        opacity: 0.85;
+                    &.technology {
+                        left: 0.5 * $bw;
+                        width: 3.5 * $bw;
+                        top: 2.5 *$bh;
                     }
-                }
-                .band-text-container {
-                    display: flex;
-                    align-items: center;
-                    height: $bu;
-                    > div:hover {
-                        cursor: pointer;
-                        opacity: 0.75;
+                    .control {
+                        border-radius: 50%;
+                        border: 2px solid $blue-primary;
+                        padding: 5px;
+                        height: 1em;
+                        width: 1em;
+                        &-left {
+                            transform: rotate(-90deg);
+                        }
+                        &-down {
+                            transform: rotate(180deg);
+                        }
+    
+                        &:hover {
+                            cursor: pointer;
+                            opacity: 0.75;
+                        }
                     }
-                }
-            }
-    
-            #diversity-container {
-                position: absolute;
-                width: 9.5 * $bw;
-                left: 0.5 * $bw;
-                height: 9 * $bh;
-                top: $bvh;
-            }
-    
-            #diversity-bottom-left {
-                border-left: $bu solid $yellow-primary;
-                border-top: $bu solid $yellow-primary;
-                position: absolute;
-                top: 4 * $bh;
-                height: 9 * $bh;
-                border-radius: 6 * $bu 0 0 0;
-                width: $bw;
-            }
-    
-            #diversity-band {
-                margin-top: 0px;
-                margin-bottom: 0px;
-                position: absolute;
-                text-align: center;
-                top: 4 * $bh;
-                height: $bu;
-                width: calc(2 * $bw + 4px);
-                left: calc($bw - 2px);
-                background-color: $yellow-primary;
-                pointer-events: fill;
-                font-size: calc($bu - 1rem);
-                justify-content: center;
-            }
-    
-            #diversity-bottom-right {
-                border-right: $bu solid $yellow-primary;
-                border-bottom: $bu solid $yellow-primary;
-                position: absolute;
-                height: calc(1.5 * $bh + $bu + 2px);
-                width: calc(0.75 * $bw + 2 * $bu);
-                top: calc(2.5 * $bh - 2px);
-                left: 3 * $bw;
-                border-radius: 0 0 8 * $bu 0;
-            }
-    
-            #diversity-top-right {
-                border-left: $bu solid $yellow-primary;
-                border-top: $bu solid $yellow-primary;
-                position: absolute;
-                height: 2 * $bh;
-                width: 5.5 * $bw;
-                top: 0.5 * $bh;
-                left: calc(3.75 * $bw + $bu);
-                border-radius: 8 * $bu 0 0 0;
-                box-sizing: border-box;
-            }
-    
-            #technology-outer {
-                border-bottom: $bu solid $blue-primary;
-                border-right: $bu solid $blue-primary;
-                height: 9.5 * $bh;
-                position: absolute;
-                left: 0;
-                width: 4.5 * $bw;
-                border-radius: 0 0 6*$bu 0;
-                top: 0;
-                box-sizing: border-box;
-            }
-    
-            #technology-band {
-                margin-top: 0px;
-                margin-bottom: 0px;
-                position: absolute;
-                bottom: -$bu;
-                left: 40%;
-                text-align: center;
-                pointer-events: fill;
-                font-size: calc($bu - 1rem);
-            }
-    
-            #sustainability-outer {
-                border-top: $bu solid $red-primary;
-                border-left: $bu solid $red-primary;
-                height: 11 * $bh;
-                position: absolute;
-                width: 8.5 * $bw;
-                left: $bw;
-                border-radius: 8*$bu 0 0 0;
-                top: 8 * $bh;
-            }
-    
-            #sustainability-band {
-                margin-top: 0px;
-                margin-bottom: 0px;
-                position: absolute;
-                top: -$bu;
-                left: 1.25 * $bw;
-                pointer-events: fill;
-                font-size: calc($bu - 1rem);
-            }
-    
-            .content-area {
-                position: absolute;
-                flex-direction: column;
-                color: $off-black-primary;
-                pointer-events: fill;
-                opacity: 1;
-                transition: 1.2s ease-in;
-                >h2 {
-                    margin: 0;
-                }
-                >p {
-                    margin-top: 0;
-                }
-                &.hidden {
-                    opacity: 0;
-                    transition: 0.2s ease-out;
-                }
-                &.diversity {
-                    left: $bw;
-                    width: 3 * $bw;
-                    align-items: flex-end;
-                    text-align: right;
-                    height: 400px;
-                    top: 5 * $bh;
-                }
-                &.sustainability {
-                    left: 4 * $bw;
-                    width: 4 * $bw;
-                    top: -1.25 * $bh;
-                    >.text-top {
-                        margin-top: 1.5 * $bu;
+                    .band-content-header {
+                        font-size: 2.5em;
                     }
-                }
-                &.technology {
-                    left: 0.5 * $bw;
-                    width: 3.5 * $bw;
-                    top: 2.5 *$bh;
-                }
-                .control {
-                    border-radius: 50%;
-                    border: 2px solid $blue-primary;
-                    padding: 5px;
-                    height: 1em;
-                    width: 1em;
-                    &-left {
-                        transform: rotate(-90deg);
-                    }
-                    &-down {
-                        transform: rotate(180deg);
-                    }
-
-                    &:hover {
-                        cursor: pointer;
-                        opacity: 0.75;
-                    }
-                }
-                .band-content-header {
-                    font-size: 2.5em;
                 }
             }
         }
-    }
-
-    .footer {
-        width: 100%;
-        display: flex;
-        overflow-x: hidden;
-        position: absolute;
-        bottom: 2.75*$bh;
-        pointer-events: none;
-        @media screen and (max-width: 900px) {
-            position: relative;
-        }
-        .footer-image {
-            width: 200%;
-            z-index: 5;
-            transition: ease-in-out 1s;
-            &.right-view {
-                transform: translate(-100vw, 0);
+    
+        .footer {
+            width: 100%;
+            display: flex;
+            overflow-x: hidden;
+            position: absolute;
+            bottom: 2.75*$bh;
+            pointer-events: none;
+            @media screen and (max-width: 900px) {
+                position: relative;
+            }
+            .footer-image {
+                width: 200%;
+                z-index: 5;
                 transition: ease-in-out 1s;
+                &.right-view {
+                    transform: translate(-$bvw, 0);
+                    transition: ease-in-out 1s;
+                }
             }
         }
     }
+}
+
+// common variables
+$bu: 2.5rem;
+$bh: 80px;
+$bvh: 6 * $bh;
+
+@media screen and (max-width: 1500px) {
+    $bw: 20vw;
+    $bvw: 5 * $bw;
+    @include bands-styling($bw, $bvw)
+}
+
+@media screen and (min-width: 1500px) {
+    $bw: 300px;
+    $bvw: 5 * $bw;
+    @include bands-styling($bw, $bvw)
 }
