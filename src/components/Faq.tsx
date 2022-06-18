@@ -10,7 +10,7 @@ const FAQ: React.FC = () => {
     const questions: faq[] = [
         {
             question: t('faq-looking-text'),
-            custom: <Trans i18nKey={'faq-looking-answer'}>Yes! Reach out to us to start the discussion at <a href='mailto:sponsorship.future@celc.cfes.ca'>sponsorship.future@celc.cfes.ca</a>.</Trans>
+            custom: <Trans i18nKey={'faq-looking-answer'}>Yes! Reach out to us to start the discussion at <a href='mailto:sponsorship@celc.cfes.ca'>sponsorship@celc.cfes.ca</a>.</Trans>
         }, {
             question: t('faq-flex-text'),
             answer: t('faq-flex-answer')
@@ -22,10 +22,10 @@ const FAQ: React.FC = () => {
             answer: t('faq-attend-answer')
         }, {
             question: t('faq-workshop-text'),
-            custom: <Trans i18nKey={'faq-workshop-answer'}>CELC 2023 will include up to 40 sessions across 3 streams. This includes hands-on workshops, panels and even a case competition! If you are interested in getting involved, reach out to our programming team at <a href='mailto:chair.future@celc.cfes.ca'>chair.future@celc.cfes.ca</a>.</Trans>
+            custom: <Trans i18nKey={'faq-workshop-answer'}>CELC 2023 will include up to 40 sessions across 3 streams. This includes hands-on workshops, panels and even a case competition! If you are interested in getting involved, reach out to our programming team at <a href='mailto:chair@celc.cfes.ca'>chair@celc.cfes.ca</a>.</Trans>
         }, {
             question: t('faq-organize-text'),
-            custom: <Trans i18nKey={'faq-organize-answer'}>CELC 2023 is always accepting volunteers to help plan our conference. Whether that's on day-to-day operations or supporting our bilingual services. Reach out to us at <a href='mailto:chair.future@celc.cfes.ca'>chair.future@celc.cfes.ca</a>.</Trans>
+            custom: <Trans i18nKey={'faq-organize-answer'}>CELC 2023 is always accepting volunteers to help plan our conference. Whether that's on day-to-day operations or supporting our bilingual services. Reach out to us at <a href='mailto:chair@celc.cfes.ca'>chair@celc.cfes.ca</a>.</Trans>
         }
     ]
 

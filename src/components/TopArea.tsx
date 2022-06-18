@@ -94,7 +94,7 @@ const TopArea: React.FC = () => {
                 </div>
                 <p className='card-body'>{t('title-description')}</p>
                 <div className="card-actions">
-                    <a className="button-solid-red" href='mailto:chairs.future@celc.cfes.ca' target='_blank'>{t('title-partner')}</a>
+                    <a className="button-solid-red" href='mailto:chairs@celc.cfes.ca' target='_blank'>{t('title-partner')}</a>
                     <AnchorLink className="button-outlined-grey" to={localizedPrefix('/#about')} stripHash title={t('title-learn')} />
                     {/* <a className="button-outlined-grey" href=''>{t('title-learn')}</a> */}
                 </div>
