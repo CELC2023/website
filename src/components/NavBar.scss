@@ -30,6 +30,7 @@ $mobile-nav-breakpoint: 900px;
     width: 100%;
     z-index: 20;
     top: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
     @media screen and (max-width: $mobile-nav-breakpoint) {
         
