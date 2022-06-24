@@ -83,7 +83,7 @@ $bvw: 5 * $bw;
             .bands-title {
                 position: absolute;
                 top: 4.5 * $bh;
-                left: 0.5 * $bw;
+                left: 50px;
                 max-width: 3 * $bw;
                 line-height: 1;
                 font-size: 4.5rem;
@@ -113,7 +113,7 @@ $bvw: 5 * $bw;
                     padding: 5px;
                     height: .75em;
                     width: .75em;
-                    margin: -3px 1em 0;
+                    margin: 0 1em;
                     vertical-align: middle;
                     cursor: pointer;
                     &.hidden {
