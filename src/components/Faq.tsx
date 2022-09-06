@@ -9,11 +9,11 @@ const FAQ: React.FC = () => {
 
     const questions: faq[] = [
         {
-            question: t('faq-looking-text'),
-            custom: <Trans i18nKey={'faq-looking-answer'}>Yes! Reach out to us to start the discussion at <a href='mailto:sponsorship@celc.cfes.ca'>sponsorship@celc.cfes.ca</a>.</Trans>
+            question: t('faq-fee'),
+            answer: t('faq-fee-answer')
         }, {
-            question: t('faq-flex-text'),
-            answer: t('faq-flex-answer')
+            question: t('faq-non-member'),
+            custom: <Trans i18nKey={'faq-non-member-answer'}>Reach out to <a href='mailto:chair@celc.cfes.ca'>chair@celc.cfes.ca</a> to start a discussion on this.</Trans>
         }, {
             question: t('faq-cfes-text'),
             custom: <Trans i18nKey={'faq-cfes-answer'}>The Canadian Federation of Engineering Students is a bilingual organization that represents all 85,000 engineering students across Canada. Through advocacy, partnerships and hosting conferences (such as this one), the CFES continues to make an impact by improving engineering student lives. Learn more about the CFES by visiting their website at <a href='https://cfes.ca'>cfes.ca</a>.</Trans>
