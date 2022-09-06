@@ -1,7 +1,6 @@
 import { graphql } from "gatsby"
 import * as React from "react"
-import About from "../components/About"
-import Bands from "../components/Bands"
+import Attend from "../components/Attend"
 import BandsCombined from "../components/BandsCombined"
 import CommitteeListing from "../components/CommitteeListing"
 import FAQ from "../components/Faq"
@@ -10,7 +9,6 @@ import History from "../components/History"
 import Layout from "../components/layout"
 import PastSponsor from "../components/PastSponsor"
 import Seo from "../components/seo"
-import Sponsor from "../components/Sponsor"
 import TopArea from "../components/TopArea"
 
 import "../styles/common.scss"
@@ -21,7 +19,7 @@ const IndexPage: React.FC = () => (
     <TopArea />
     <BandsCombined />
     <History />
-    <Sponsor />
+    <Attend /> 
     <PastSponsor />
     <FAQ />
     <CommitteeListing />
