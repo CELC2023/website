@@ -5,6 +5,7 @@ import BandsCombined from "../components/BandsCombined"
 import CommitteeListing from "../components/CommitteeListing"
 import FAQ from "../components/Faq"
 import History from "../components/History"
+import HowToAttend from "../components/HowToAttend"
 
 import Layout from "../components/layout"
 import PastSponsor from "../components/PastSponsor"
@@ -19,6 +20,7 @@ const IndexPage: React.FC = () => (
     <TopArea />
     <BandsCombined />
     <History />
+    <HowToAttend />
     <Attend /> 
     <PastSponsor />
     <FAQ />
