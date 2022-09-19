@@ -5,19 +5,12 @@ import NavToggleIcon from "../images/icons/menu-icon.svg"
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import "./NavBar.scss";
 import { languages as langConsts } from "../utils/languageConstants";
+import { localizedPrefix } from "../utils/localizationUtils";
 
 const NavBar: React.FC = () => {
   const { language, languages, originalPath} = useI18next()
   const { t } = useTranslation();
-  const [mobileNavigationToggle, setMobileNavigationToggle] = useState<boolean>(false);
-
-  const localizedPrefix = (link: string) => {
-    if(language === 'en') {
-      return link;
-    } else {
-      return `/${language}${link}`
-    }
-  }
+  const [mobileNavigationToggle, setMobileNavigationToggle] = useState<boolean>(false); 
 
   const navBarLinks = [
     {
