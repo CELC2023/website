@@ -3,35 +3,50 @@
 .footer {
     width: 100%;
 
-    .text {
-        color: $white-primary;
+    .links {
+        padding: 25px 75px;
+        display: flex;
         background-color: $off-black-primary;
-        padding: 50px 75px;
-        text-align: center;
+        color: $white-primary;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        .link-group {
+            display: flex;
+            flex-direction: column;
+            margin: 0.5em 0.5em;
+            margin-right: auto;
+            width: 13em;
+            .group-header {
+                margin: 0;
+                font-weight: 700;
+            }
+        }
+    }
 
+    .footer-link {
+        cursor: pointer;
+        &:link, &:visited, &:active {
+            color: $white-primary;
+            text-decoration: none;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .footer-text {
+        &-primary {
+            font-weight: 600;
+        }
+    }
+
+    .banner {
+        background-color: $red-primary;
+        color: $white-primary;
+        padding: 25px 75px;
+        text-align: center;
         .divider {
             padding: 0 0.5em;
-        }
-
-        .footer-text {
-            &-primary {
-                font-weight: 600;
-            }
-
-            &-secondary {
-
-            }
-        }
-
-        .footer-link {
-            &:link, &:visited, &:active {
-                color: $white-primary;
-                text-decoration: none;
-            }
-
-            &:hover {
-                text-decoration: underline;
-            }
         }
     }
 }
