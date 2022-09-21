@@ -1,11 +1,11 @@
 [[redirects]]
     from = "predelegate"
-    to = "https://res.cloudinary.com/celc/image/upload/v1663726803/pre-delegate-form/package/Pre_Delegate_Package_EN.pdf"
+    to = "https://res.cloudinary.com/celc/image/upload/v1663731132/pre-delegate-form/package/Pre_Delegate_Package_EN.pdf"
     status = 200
 
 [[redirects]]
     from = "predelegues"
-    to = "https://res.cloudinary.com/celc/image/upload/v1663726805/pre-delegate-form/package/Pre_Delegate_Package_FR.pdf"
+    to = "https://res.cloudinary.com/celc/image/upload/v1663731132/pre-delegate-form/package/Pre_Delegate_Package_EN.pdf"
     status = 200
 
 [[redirects]]
