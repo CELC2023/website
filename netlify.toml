@@ -1,0 +1,19 @@
+[[redirects]]
+    from = "brand"
+    to = "https://drive.google.com/file/d/1dZQvR_Cf-RKH8NZQmVGB__B_AODmI8wt/view?usp=sharing"
+    status = 200
+
+[[redirects]]
+    from = "predelegate"
+    to = "https://res.cloudinary.com/celc/image/upload/v1663722076/pre-delegate-form/package/Pre-Delegate_Package_EN.pdf"
+    status = 200
+
+[[redirects]]
+    from = "predelegues"
+    to = "https://res.cloudinary.com/celc/image/upload/v1663722070/pre-delegate-form/package/Pre-Delegate_Package_FR.pdf"
+    status = 200
+
+[[redirects]]
+    from = "/*"
+    to = "/index.html"
+    status = 200
