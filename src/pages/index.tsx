@@ -8,7 +8,7 @@ import History from "../components/History"
 import HowToAttend from "../components/HowToAttend"
 
 import Layout from "../components/layout"
-import PastSponsor from "../components/PastSponsor"
+import Sponsors from "../components/Sponsors"
 import Seo from "../components/seo"
 import TopArea from "../components/TopArea"
 
@@ -22,7 +22,7 @@ const IndexPage: React.FC = () => (
     <History />
     <HowToAttend />
     <Attend /> 
-    <PastSponsor />
+    <Sponsors />
     <FAQ />
     <CommitteeListing />
   </Layout>

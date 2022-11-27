@@ -40,7 +40,7 @@ const Attend: React.FC = () => {
     ]
 
     return (
-        <section className="sponsor padded-section" id="sponsor">
+        <section className="attend padded-section" id="attend">
             <Fade bottom>
                 <div className="title">
                     <h2 className="title-blue">{t('attend-why')}</h2>
@@ -50,7 +50,7 @@ const Attend: React.FC = () => {
                         {
                             attendCards.map((c, i) => {
                                 return (
-                                    <div className="card">
+                                    <div className="card" key={i}>
                                         <img className="perk-icon" src={c.image} />
                                         <p className='all-caps'>{t(c.textKey)}</p>
                                     </div>

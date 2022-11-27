@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="footer">
-      <div className="links">
+      {/* <div className="links">
         <div className="link-group">
           <p className="group-header">General</p>
           <a className="footer-link">Organizing Team</a>
@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
           <a className="footer-link">Women In Engineering Resources</a>
           <a className="footer-link">Sustainability Resources</a> 
         </div>
-      </div>
+      </div> */}
       <div className="banner">
       <span className="footer-text-primary">{t('footer-land')}</span>
         <span className="divider">|</span>
