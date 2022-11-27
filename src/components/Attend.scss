@@ -1,6 +1,6 @@
 @import "../styles/colors.scss";
 
-@keyframes sponsor-card {
+@keyframes attend-card {
     from {
         transform: translateY(0);
     }
@@ -9,7 +9,7 @@
     }
 }
 
-.sponsor {
+.attend {
     .perk-cards {
         display: flex;
         flex-direction: row;
@@ -49,7 +49,7 @@
             }
             &:hover {
                 cursor: default;
-                animation-name: sponsor-card;
+                animation-name: attend-card;
                 animation-duration: 0.5s;
                 transform: translateY(-0.25em);
             }

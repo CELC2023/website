@@ -26,17 +26,18 @@ const NavBar: React.FC = () => {
       url: localizedPrefix('/#history'),
       class: 'navbar-link'
     }, {
-      text: t('navbar-why'),
-      url: localizedPrefix('/#sponsor'),
+      text: t('attend-why'),
+      url: localizedPrefix('/#attend'),
+      class: 'navbar-link'
+    }, {
+      text: t('sponsors'),
+      url: localizedPrefix('/#sponsors'),
       class: 'navbar-link'
     }, {
       text: t('navbar-faq'),
       url: localizedPrefix('/#faq'),
       class: 'navbar-link'
-    },/* {
-      text: t('navbar-contact'),
-      url: localizedPrefix('/#contact')
-    } */
+    }
   ]
 
   return (
