@@ -131,15 +131,15 @@ const Sponsors: React.FC = () => {
             name: 'NSERC',
             logo: 'nserc.png'
         }, {
-            name: 'Sticker Mule',
-            logo: 'stickermule.png'
-        }, {
             name: 'Synopsys',
             logo: 'synopsys.png'
         }], 
         other: [{
             name: "PWC",
             logo: "pwc.png"
+        }, {
+            name: 'Sticker Mule',
+            logo: 'stickermule.png'
         }]
     }
 
