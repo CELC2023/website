@@ -44,12 +44,16 @@ const SponsorTier: React.FC<SponsorTierProps> = ({ sponsors, level }) => {
   const { t } = useTranslation()
   return (
     <div className={`tier-listing ${level.toString()}`}>
-      <h2 className="sponsor-level">{t(level.toString())}</h2>
-      <div className="sponsor-logos">
-        {sponsors.map(s => {
-          return <SponsorLogo {...s} logo={ImagePrefix + s.logo} key={s.name} />
-        })}
-      </div>
+      <Fade bottom>
+        <h2 className="sponsor-level">{t(level.toString())}</h2>
+        <div className="sponsor-logos">
+          {sponsors.map(s => {
+            return (
+              <SponsorLogo {...s} logo={ImagePrefix + s.logo} key={s.name} />
+            )
+          })}
+        </div>
+      </Fade>
     </div>
   )
 }
@@ -172,45 +176,45 @@ const Sponsors: React.FC = () => {
     <section className="sponsors padded-section" id="sponsors">
       <Fade bottom>
         <h2 className="title-blue">{t("sponsor-current")}</h2>
-        <div className="sponsors-listing">
-          {SponsorList.partner && SponsorList.partner?.length > 0 && (
-            <SponsorTier
-              level={SponsorshipLevels.Partner}
-              sponsors={SponsorList.partner}
-            />
-          )}
-          {SponsorList.platinum && SponsorList.platinum?.length > 0 && (
-            <SponsorTier
-              level={SponsorshipLevels.Platinum}
-              sponsors={SponsorList.platinum}
-            />
-          )}
-          {SponsorList.gold && SponsorList.gold?.length > 0 && (
-            <SponsorTier
-              level={SponsorshipLevels.Gold}
-              sponsors={SponsorList.gold}
-            />
-          )}
-          {SponsorList.silver && SponsorList.silver?.length > 0 && (
-            <SponsorTier
-              level={SponsorshipLevels.Silver}
-              sponsors={SponsorList.silver}
-            />
-          )}
-          {SponsorList.bronze && SponsorList.bronze?.length > 0 && (
-            <SponsorTier
-              level={SponsorshipLevels.Bronze}
-              sponsors={SponsorList.bronze}
-            />
-          )}
-          {SponsorList.other && SponsorList.other?.length > 0 && (
-            <SponsorTier
-              level={SponsorshipLevels.Other}
-              sponsors={SponsorList.other}
-            />
-          )}
-        </div>
       </Fade>
+      <div className="sponsors-listing">
+        {SponsorList.partner && SponsorList.partner?.length > 0 && (
+          <SponsorTier
+            level={SponsorshipLevels.Partner}
+            sponsors={SponsorList.partner}
+          />
+        )}
+        {SponsorList.platinum && SponsorList.platinum?.length > 0 && (
+          <SponsorTier
+            level={SponsorshipLevels.Platinum}
+            sponsors={SponsorList.platinum}
+          />
+        )}
+        {SponsorList.gold && SponsorList.gold?.length > 0 && (
+          <SponsorTier
+            level={SponsorshipLevels.Gold}
+            sponsors={SponsorList.gold}
+          />
+        )}
+        {SponsorList.silver && SponsorList.silver?.length > 0 && (
+          <SponsorTier
+            level={SponsorshipLevels.Silver}
+            sponsors={SponsorList.silver}
+          />
+        )}
+        {SponsorList.bronze && SponsorList.bronze?.length > 0 && (
+          <SponsorTier
+            level={SponsorshipLevels.Bronze}
+            sponsors={SponsorList.bronze}
+          />
+        )}
+        {SponsorList.other && SponsorList.other?.length > 0 && (
+          <SponsorTier
+            level={SponsorshipLevels.Other}
+            sponsors={SponsorList.other}
+          />
+        )}
+      </div>
     </section>
   )
 }
