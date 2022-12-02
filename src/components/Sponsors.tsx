@@ -15,6 +15,7 @@ enum SponsorshipLevels {
 interface Sponsor {
   name: string
   logo: string
+  url?: string
 }
 
 interface SponsorData {
@@ -31,10 +32,17 @@ interface SponsorTierProps {
   level: SponsorshipLevels
 }
 
-const SponsorLogo: React.FC<Sponsor> = ({ name, logo }) => {
+const SponsorLogo: React.FC<Sponsor> = ({ name, logo, url = "" }) => {
   return (
     <div className="sponsor-logo">
-      <img src={logo} alt={name} id={name.replace(/ /g, "").toLowerCase()} />
+      {
+        url === "" ? 
+        <img src={logo} alt={name} id={name.replace(/ /g, "").toLowerCase()} />
+        :
+        <a href={url} target={'_blank'}>
+         <img src={logo} alt={name} id={name.replace(/ /g, "").toLowerCase()} /> 
+        </a>
+      }
     </div>
   )
 }
@@ -168,6 +176,7 @@ const Sponsors: React.FC = () => {
       {
         name: "Sticker Mule",
         logo: "stickermule.png",
+        url: "https://www.stickermule.com/uses/laptop-stickers?utm_source=sponsorship&utm_medium=referral&utm_campaign=CANADIANENGINEERINGLEADERSHIP2023"
       },
     ],
   }
