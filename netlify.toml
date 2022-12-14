@@ -9,6 +9,11 @@
     status = 200
 
 [[redirects]]
+    from = "careerfairpackage"
+    to = "https://celcassets.cfes.ca/packages/Career_Fair_Package_EN.pdf"
+    status = 200
+
+[[redirects]]
     from = "/*"
     to = "/index.html"
     status = 200
