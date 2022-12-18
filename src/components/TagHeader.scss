@@ -1,0 +1,18 @@
+@import "../styles/colors.scss";
+
+.tag-header {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    .tag-greeting {
+        color: $grey-primary;
+        line-height: 150%;
+        font-family: "Roboto", Arial, Helvetica, sans-serif;
+        margin: 0;
+    }
+    .tag-logo {
+        width: 50px;
+        height: auto;
+        margin-left: auto;
+    }
+}
