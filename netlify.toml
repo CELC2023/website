@@ -16,7 +16,7 @@
 [[redirects]]
     from = "schedule"
     to = "https://docs.google.com/spreadsheets/d/1XVJHUL8Y3dbs3iR5aHOk0oQDtJvMDaCUvgWv3txxZTQ/view#gid=220569605"
-    status = 200
+    status = 301
 
 [[redirects]]
     from = "programme"
@@ -26,7 +26,7 @@
 [[redirects]]
     from = "delegate"
     to = "https://celcassets.cfes.ca/packages/Delegate_Package_EN.pdf"
-    status = 200
+    status = 301
 
 [[redirects]]
     from = "delegues"
