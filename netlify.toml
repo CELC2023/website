@@ -14,6 +14,26 @@
     status = 200
 
 [[redirects]]
+    from = "schedule"
+    to = "https://docs.google.com/spreadsheets/d/1XVJHUL8Y3dbs3iR5aHOk0oQDtJvMDaCUvgWv3txxZTQ/view#gid=220569605"
+    status = 200
+
+[[redirects]]
+    from = "programme"
+    to = "https://docs.google.com/spreadsheets/d/1XVJHUL8Y3dbs3iR5aHOk0oQDtJvMDaCUvgWv3txxZTQ/view#gid=2007036342"
+    status = 200
+
+[[redirects]]
+    from = "delegate"
+    to = "https://celcassets.cfes.ca/packages/Delegate_Package_EN.pdf"
+    status = 200
+
+[[redirects]]
+    from = "delegues"
+    to = "https://celcassets.cfes.ca/packages/Paquet_De_delegues.pdf"
+    status = 200
+
+[[redirects]]
     from = "/*"
     to = "/index.html"
     status = 200
