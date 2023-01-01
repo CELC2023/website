@@ -6,7 +6,7 @@
   "author": "Robert Brown",
   "dependencies": {
     "add": "^2.0.6",
-    "firebase": "^9.6.6",
+    "firebase": "8",
     "gatsby": "^3.3.1",
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-firebase": "^0.2.0-beta.4",

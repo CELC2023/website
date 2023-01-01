@@ -8,7 +8,7 @@ interface TagLinkProps {
 
 const TagLink: React.FC<TagLinkProps> = ({text, url = ''}) => {
     return (
-        <a className="tag-link" href={url}>
+        <a className="tag-link" href={url} target={'_blank'} rel={'noreferrer'}>
             <img className="link-icon" />
             <span className="link-text">{text}</span>
         </a>
