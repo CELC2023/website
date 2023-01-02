@@ -107,8 +107,8 @@ const TagsPage: React.FC<PageProps> = (props: PageProps) => {
     },
     {
       text: t("link-irc"),
-      url: "https://cfes.ca/irc",
-      frurl: "https://cfes.ca/irc",
+      url: "https://celc.cfes.ca/irc",
+      frurl: "https://celc.cfes.ca/irc",
       icon: IRCIcon,
     },
     {

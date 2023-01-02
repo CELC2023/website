@@ -40,6 +40,12 @@
     status = 301
 
 [[redirects]]
+    from = "irc"
+    to = "https://forms.gle/oGqU5rTumKY5MrLy8"
+    status = 301
+
+
+[[redirects]]
     from = "/*"
     to = "/index.html"
     status = 200
