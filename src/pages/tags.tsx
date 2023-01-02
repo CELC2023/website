@@ -123,13 +123,15 @@ const TagsPage: React.FC<PageProps> = (props: PageProps) => {
   return (
     <div className="tag-container">
       <TagHeader name={data?.first || ""} />
-      { data?.character && Date.now() >= 1672696800 * 1000 && Date.now() <= 1672851600 * 1000 && (
+      {/* { data?.character && Date.now() >= 1672696800 * 1000 && Date.now() <= 1672851600 * 1000 && ( */}
+      {true && (
         <DisneyCharacter title={t('header-disney-character')} name={data.character} />
       )}
       <TagContent title={t("header-dynamic-links")}>
         <>
           {dynamicLinks
             .filter(e => {
+              return true
               if (
                 e.start * 1000 <= Date.now() &&
                 (e.stop == undefined || e.stop * 1000 <= Date.now())
