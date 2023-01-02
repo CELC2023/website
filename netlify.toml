@@ -31,7 +31,13 @@
 [[redirects]]
     from = "delegues"
     to = "https://celcassets.cfes.ca/packages/Paquet_De_delegues_FR.pdf"
-    status = 301 
+    status = 301
+
+
+[[redirects]]
+    from = "programming"
+    to = "https://celcassets.cfes.ca/packages/Programming_Package_EN.pdf"
+    status = 301
 
 [[redirects]]
     from = "/*"
