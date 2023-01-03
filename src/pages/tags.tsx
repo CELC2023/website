@@ -171,7 +171,7 @@ const TagsPage: React.FC<PageProps> = (props: PageProps) => {
           })}
         </>
       </TagContent>
-      {data?.caseCompGroup && Date.now() >= 1672779764 * 1000 && (
+      {data?.caseCompGroup && Date.now() >= 1672786800 * 1000 && (
         <TagContent title={t("header-case-comp")}>
           <p>{data.caseCompGroup}</p>
         </TagContent>
