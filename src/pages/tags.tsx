@@ -18,13 +18,13 @@ import IRCIcon from "../images/icons/irc.svg"
 import WebsiteIcon from "../images/icons/website.svg"
 import InstagramIcon from "../images/icons/instagram.svg"
 import DiscordIcon from "../images/icons/discord.svg"
-
+import DriveIcon from "../images/icons/drive.svg"
 
 const TagsPage: React.FC<PageProps> = (props: PageProps) => {
   const [user, setUser] = useState<string>("")
   const [data, setData] = useState<Delegate | null>(null)
 
-  const { t, language } = useI18next()
+  const { t, language, changeLanguage } = useI18next()
 
   useEffect(() => {
     if (typeof window !== undefined) {
@@ -44,6 +44,9 @@ const TagsPage: React.FC<PageProps> = (props: PageProps) => {
         .then(snapshot => {
           if (snapshot.val() !== null) {
             setData(snapshot.val())
+            if(snapshot.val()["language"] == "French") {
+              changeLanguage('fr')
+            }
           }
         })
     }
@@ -128,6 +131,12 @@ const TagsPage: React.FC<PageProps> = (props: PageProps) => {
         "https://discord.com/channels/1000686343761973338/1000687646756057210",
       icon: DiscordIcon,
     },
+    {
+      text: t("link-public-drive"),
+      url:
+        "https://drive.google.com/drive/folders/1BZKbB9WBa5qEaCADlIHn4kmbnePtzEw9?usp=share_link",
+      icon: DriveIcon,
+    },
   ]
 
   return (
@@ -167,13 +176,29 @@ const TagsPage: React.FC<PageProps> = (props: PageProps) => {
             const url = e.url || "#"
             const frurl = e.frurl || e.url || ""
             const localizedUrl = language === "en" ? url : frurl
-            return <TagLink text={e.text} url={localizedUrl || "#"} key={i} icon={e.icon} />
+            return (
+              <TagLink
+                text={e.text}
+                url={localizedUrl || "#"}
+                key={i}
+                icon={e.icon}
+              />
+            )
           })}
         </>
       </TagContent>
-      {data?.caseCompGroup && Date.now() >= 1672786800 * 1000 && (
+      {/* {data?.caseCompGroup && Date.now() >= 1672786800 * 1000 && ( */}
+         {true && (
         <TagContent title={t("header-case-comp")}>
-          <p>{data.caseCompGroup}</p>
+          <>
+            <p>
+              {t("text-group")}: {data?.caseCompGroup}
+            </p>
+            <TagLink
+              text={t("link-case-comp-resources")}
+              url={"https://celc.cfes.ca/casecomp"}
+            />
+          </>
         </TagContent>
       )}
     </div>
