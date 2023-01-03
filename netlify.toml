@@ -44,6 +44,10 @@
     to = "https://forms.gle/oGqU5rTumKY5MrLy8"
     status = 301
 
+[[redirects]]
+    from = "casecomp"
+    to = "https://drive.google.com/drive/folders/1Nu57SIeJB_GxgAWsCCA47Texk-zSaibf?usp=sharing"
+    status = 301
 
 [[redirects]]
     from = "/*"
