@@ -40,7 +40,7 @@
     status = 301
 
 [[redirects]]
-    from = "programme"
+    from = "paquetdeprogramme"
     to = "https://celcassets.cfes.ca/packages/Paquetdeprogramme_FR.pdf"
     status = 301
 
