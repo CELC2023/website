@@ -66,28 +66,28 @@ const TagsPage: React.FC<PageProps> = (props: PageProps) => {
     //   stop: 1672902000,
     //   url: "",
     // },
-    {
-      title: "Twisted Venue Information",
-      start: 1673136000,
-      url: "",
-    },
-    {
-      title: "Career Fair Map + Companies",
-      start: 1672934400,
-      stop: 1672952400,
-      url: "",
-    },
-    {
-      title: "Rajveer Venue Information PDF",
-      start: 1672876800,
-      stop: 1673074800,
-      url: "",
-    },
-    {
-      title: "Case Comp Judging Schedule",
-      start: 1673114400,
-      url: "",
-    },
+    // {
+    //   title: "Twisted Venue Information",
+    //   start: 1673136000,
+    //   url: "",
+    // },
+    // {
+    //   title: "Career Fair Map + Companies",
+    //   start: 1672934400,
+    //   stop: 1672952400,
+    //   url: "",
+    // },
+    // {
+    //   title: "Rajveer Venue Information PDF",
+    //   start: 1672876800,
+    //   stop: 1673074800,
+    //   url: "",
+    // },
+    // {
+    //   title: "Case Comp Judging Schedule",
+    //   start: 1673114400,
+    //   url: "",
+    // },
   ]
 
   const staticLinks = [
@@ -100,6 +100,7 @@ const TagsPage: React.FC<PageProps> = (props: PageProps) => {
     {
       text: t("link-programming-package"),
       url: "https://celc.cfes.ca/programming",
+      frurl: "https://celc.cfes.ca/programme",
       icon: ProgrammingIcon,
     },
     {

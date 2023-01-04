@@ -40,6 +40,11 @@
     status = 301
 
 [[redirects]]
+    from = "programme"
+    to = "https://celcassets.cfes.ca/packages/Paquetdeprogramme_FR.pdf"
+    status = 301
+
+[[redirects]]
     from = "irc"
     to = "https://forms.gle/oGqU5rTumKY5MrLy8"
     status = 301
