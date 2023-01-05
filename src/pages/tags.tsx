@@ -53,13 +53,13 @@ const TagsPage: React.FC<PageProps> = (props: PageProps) => {
   }, [user])
 
   const dynamicLinks = [
-    {
-      title: "Food Crawl Guide",
-      start: 1672876800,
-      stop: 1672988400,
-      url: "",
-      frurl: "",
-    },
+    // {
+    //   title: "Food Crawl Guide",
+    //   start: 1672876800,
+    //   stop: 1672988400,
+    //   url: "",
+    //   frurl: "",
+    // },
     // {
     //   title: "Greta Venue Information",
     //   start: 1672851600,
@@ -155,7 +155,7 @@ const TagsPage: React.FC<PageProps> = (props: PageProps) => {
             .filter(e => {
               if (
                 e.start * 1000 <= Date.now() &&
-                (e.stop == undefined || e.stop * 1000 <= Date.now())
+                (e.stop == undefined || e.stop * 1000 >= Date.now())
               ) {
                 return true
               }
@@ -163,7 +163,8 @@ const TagsPage: React.FC<PageProps> = (props: PageProps) => {
             })
             .map((e, i) => {
               const url = e.url || "#"
-              const frurl = e.frurl || e.url || ""
+              // const frurl = e.frurl || e.url || ""
+              const frurl = e.url || ""
               const localizedUrl = language === "en" ? url : frurl
               return (
                 <TagLink text={e.title} key={i} url={localizedUrl || "#"} />
