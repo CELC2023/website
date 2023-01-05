@@ -71,12 +71,12 @@ const TagsPage: React.FC<PageProps> = (props: PageProps) => {
     //   start: 1673136000,
     //   url: "",
     // },
-    // {
-    //   title: "Career Fair Map + Companies",
-    //   start: 1672934400,
-    //   stop: 1672952400,
-    //   url: "",
-    // },
+    {
+      title: t('link-career-fair'),
+      start: 1672934400,
+      stop: 1672952400,
+      url: "https://www.figma.com/file/UlCNBhke48wLWw3k5r2y1X/Map?node-id=318%3A23306&t=U8FGBg2Mq1QlC4Jt-1",
+    },
     // {
     //   title: "Rajveer Venue Information PDF",
     //   start: 1672876800,
