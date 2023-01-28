@@ -48,7 +48,6 @@ const SponsorLogo: React.FC<Sponsor> = ({ name, logo, url = "" }) => {
 }
 
 const SponsorTier: React.FC<SponsorTierProps> = ({ sponsors, level }) => {
-  const ImagePrefix = "https://celcassets.cfes.ca/logos/"
   const { t } = useTranslation()
   return (
     <div className={`tier-listing ${level.toString()}`}>
@@ -57,7 +56,7 @@ const SponsorTier: React.FC<SponsorTierProps> = ({ sponsors, level }) => {
         <div className="sponsor-logos">
           {sponsors.map(s => {
             return (
-              <SponsorLogo {...s} logo={ImagePrefix + s.logo} key={s.name} />
+              <SponsorLogo {...s} logo={s.logo} key={s.name} />
             )
           })}
         </div>
@@ -73,109 +72,109 @@ const Sponsors: React.FC = () => {
     partner: [
       {
         name: "TC Energy",
-        logo: "tcenergy.png",
+        logo: "https://res.cloudinary.com/celc/image/upload/v1674944791/celc2023-static/logos/tcenergy_qfkxvp.png",
       },
       {
         name: "Schulich School of Engineering",
-        logo: "sse.png",
+        logo: "https://res.cloudinary.com/celc/image/upload/v1674944790/celc2023-static/logos/sse_wod07m.png",
       },
     ],
     platinum: [
       {
         name: "Arcurve",
-        logo: "arcurve.png",
+        logo: "https://res.cloudinary.com/celc/image/upload/v1674944787/celc2023-static/logos/arcurve_bu9qvk.png",
       },
       {
         name: "ESS",
-        logo: "ess.png",
+        logo: "https://res.cloudinary.com/celc/image/upload/v1674944788/celc2023-static/logos/ess_kp8vn3.png",
       },
       {
         name: "Graham Construction",
-        logo: "graham.png",
+        logo: "https://res.cloudinary.com/celc/image/upload/v1674944788/celc2023-static/logos/graham_tir3g5.png",
       },
       {
         name: "Spartan Controls",
-        logo: "spartancontrols.png",
+        logo: "https://res.cloudinary.com/celc/image/upload/v1674944790/celc2023-static/logos/spartancontrols_ssbzdv.png",
       },
     ],
     gold: [
       {
         name: "ACEC",
-        logo: "acec.png",
+        logo: "https://res.cloudinary.com/celc/image/upload/v1674944787/celc2023-static/logos/acec_omctq6.png",
       },
       {
         name: "AtlasCopco",
-        logo: "atlascopco.png",
+        logo: "https://res.cloudinary.com/celc/image/upload/v1674944787/celc2023-static/logos/atlascopco_hcovik.png",
       },
       {
         name: "Cisco",
-        logo: "cisco.png",
+        logo: "https://res.cloudinary.com/celc/image/upload/v1674944788/celc2023-static/logos/cisco_ewbwla.png",
       },
       {
         name: "McElhanney",
-        logo: "mcelhanney.png",
+        logo: "https://res.cloudinary.com/celc/image/upload/v1674944789/celc2023-static/logos/mcelhanney_a4ghue.png",
       },
       {
         name: "WSP",
-        logo: "wsp.png",
+        logo: "https://res.cloudinary.com/celc/image/upload/v1674944791/celc2023-static/logos/wsp_ldtkci.png",
       },
       {
         name: "CIMA+",
-        logo: "cima.png",
+        logo: "https://res.cloudinary.com/celc/image/upload/v1674944788/celc2023-static/logos/cima_imyqmb.png",
       },
     ],
     silver: [
       {
         name: "APEGA",
-        logo: "apega.png",
+        logo: "https://res.cloudinary.com/celc/image/upload/v1674944787/celc2023-static/logos/apega_srgsl9.png",
       },
       {
         name: "Borea Construction",
-        logo: "borea.png",
+        logo: "https://res.cloudinary.com/celc/image/upload/v1674944787/celc2023-static/logos/borea_bpn14j.png",
       },
       {
         name: "Engineers Canada",
-        logo: "engineerscanada.png",
+        logo: "https://res.cloudinary.com/celc/image/upload/v1674944788/celc2023-static/logos/engineerscanada_pikomg.png",
       },
       {
         name: "Kewit",
-        logo: "kewit.png",
+        logo: "https://res.cloudinary.com/celc/image/upload/v1674944788/celc2023-static/logos/kewit_ne5tcg.png",
       },
       {
         name: "Pathways Alliance",
-        logo: "pathwaysalliance.png",
+        logo: "https://res.cloudinary.com/celc/image/upload/v1674944790/celc2023-static/logos/pathwaysalliance_dd36es.png",
       },
       {
         name: "SLB",
-        logo: "slb.png",
+        logo: "https://res.cloudinary.com/celc/image/upload/v1674944790/celc2023-static/logos/slb_bjbyrl.png",
       },
       {
         name: "Western University",
-        logo: "westernuniversity.png",
+        logo: "https://res.cloudinary.com/celc/image/upload/v1674944791/celc2023-static/logos/westernuniversity_k3zuon.png",
       },
     ],
     bronze: [
       {
         name: "Esri",
-        logo: "esri.png",
+        logo: "https://res.cloudinary.com/celc/image/upload/v1674944788/celc2023-static/logos/esri_j3hlyp.png",
       },
       {
         name: "NSERC",
-        logo: "nserc.png",
+        logo: "https://res.cloudinary.com/celc/image/upload/v1674944790/celc2023-static/logos/nserc_ulbuqu.png",
       },
       {
         name: "Synopsys",
-        logo: "synopsys.png",
+        logo: "https://res.cloudinary.com/celc/image/upload/v1674944791/celc2023-static/logos/synopsys_z5r8pi.png",
       },
     ],
     other: [
       {
         name: "PWC",
-        logo: "pwc.png",
+        logo: "https://res.cloudinary.com/celc/image/upload/v1674944790/celc2023-static/logos/pwc_z5rrql.png",
       },
       {
         name: "Sticker Mule",
-        logo: "stickermule.png",
+        logo: "https://res.cloudinary.com/celc/image/upload/v1674944791/celc2023-static/logos/stickermule_sc5xhp.png",
         url: "https://www.stickermule.com/uses/laptop-stickers?utm_source=sponsorship&utm_medium=referral&utm_campaign=CANADIANENGINEERINGLEADERSHIP2023"
       },
     ],

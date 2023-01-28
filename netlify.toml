@@ -1,17 +1,17 @@
 [[redirects]]
     from = "predelegate"
-    to = "https://res.cloudinary.com/celc/image/upload/v1663785282/pre-delegate-form/package/Pre_Delegate_Package_EN_wbiscj.pdf"
-    status = 200
+    to = "https://drive.google.com/file/d/18NZx8Pm9NFpxOkploIQx0r49hFv6IjBs/view?usp=share_link"
+    status = 301
 
 [[redirects]]
     from = "predelegues"
-    to = "https://res.cloudinary.com/celc/image/upload/v1663785273/pre-delegate-form/package/Paquet_De_Pre_delegues_FR_kkqwdn.pdf"
-    status = 200
+    to = "https://drive.google.com/file/d/19L64-TfN9a9nAdheLT-yD4eoHVdjdqnT/view?usp=share_link"
+    status = 301
 
 [[redirects]]
     from = "careerfairpackage"
-    to = "https://celcassets.cfes.ca/packages/Career_Fair_Package_EN.pdf"
-    status = 200
+    to = "https://drive.google.com/file/d/1HCAskd__DMZn35D3lb8JI4snRvUBXcPL/view?usp=share_link"
+    status = 301
 
 [[redirects]]
     from = "schedule"
@@ -25,23 +25,23 @@
 
 [[redirects]]
     from = "delegate"
-    to = "https://celcassets.cfes.ca/packages/Delegate_Package_EN.pdf"
+    to = "https://drive.google.com/file/d/1hUHZVxigji6YVntgpHme0llzH20_2728/view?usp=share_link"
     status = 301
 
 [[redirects]]
     from = "delegues"
-    to = "https://celcassets.cfes.ca/packages/Paquet_De_delegues_FR.pdf"
+    to = "https://drive.google.com/file/d/1tOe3_S9k470qWcUT0Kurpfn7rwshvtZ8/view?usp=share_link"
     status = 301
 
 
 [[redirects]]
     from = "programming"
-    to = "https://celcassets.cfes.ca/packages/Programming_Package_EN.pdf"
+    to = "https://drive.google.com/file/d/1hP7feCM_i9Fx8hkEOfyOAEuW5SMqQptp/view?usp=share_link"
     status = 301
 
 [[redirects]]
     from = "paquetdeprogramme"
-    to = "https://celcassets.cfes.ca/packages/Paquetdeprogramme_FR.pdf"
+    to = "https://drive.google.com/file/d/1UPmaEWfVxlkHLk3AYWfC5dRBOEA3RsfX/view?usp=share_link"
     status = 301
 
 [[redirects]]
